@@ -1,0 +1,21 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Andrew Quaye
+ * Date: 02/09/2018
+ * Time: 2:38 AM
+ */
+
+class AppLang{
+
+    public static function en_us(){
+        return "en_us.php";
+    }
+
+    public static function en_fr(){
+
+    }
+
+}
+
+

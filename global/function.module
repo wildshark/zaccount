@@ -1,0 +1,16 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Andrew Quaye
+ * Date: 02/09/2018
+ * Time: 4:27 AM
+ */
+
+function income_categories($conn){
+
+}
+
+function expenses_categories($conn){
+
+
+}

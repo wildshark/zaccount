@@ -1,0 +1,24 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Andrew Quaye
+ * Date: 02/09/2018
+ * Time: 2:26 AM
+ */
+
+if (isset($_POST['page'])){
+    $page = $_POST['page'];
+}else{
+    $page = $_GET['page'];
+}
+
+switch ($page){
+    case"dashboard";
+        require "template/dashboard.phtml";
+    break;
+    case "salary";
+        $template->title ="Salary book";
+        $template->content ="view/salary.php";
+        require "template/form.php";
+    break;
+}
