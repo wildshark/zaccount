@@ -1,0 +1,53 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Andrew Quaye
+ * Date: 02/09/2018
+ * Time: 7:57 PM
+ */
+
+class Setting{
+
+    private function IncomeCounter($conn){
+
+        $data ="SELECT Count(get_income_category.cataID) AS total FROM get_income_category";
+        $result = $conn->query($data);
+        $counter = $result->fetch_assoc();
+
+        if (!is_null($counter['total'])){
+            $total = $counter + 1;
+        }else{
+            $total = 101;
+        }
+        return $total;
+    }
+    private function ExpensesCounter($conn){
+
+        $data ="SELECT Count(get_expenses_category.cataID) AS total FROM get_expenses_category";
+        $result = $conn->query($data);
+        $counter = $result->fetch_assoc();
+
+        if (!is_null($counter['total'])){
+            $total = $counter + 1;
+        }else{
+            $total = 101;
+        }
+        return $total;
+    }
+
+    public static function add_data($conn){
+
+        $type = $_POST['type'];
+        $category = $_POST['category'];
+        $description =$_POST['description'];
+
+        if ($type == 1){
+            $cat_code  = self::IncomeCounter();
+        }else{
+            $cat_code = self::ExpensesCounter();
+        }
+
+        $add="INSERT INTO `category` (`cata_code`, `category`,`description`, `bookID`) VALUES ('$cat_code', '$category', '$description')";
+
+    }
+}

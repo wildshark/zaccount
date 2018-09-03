@@ -12,18 +12,18 @@ $template = new stdClass();
 $template->title ="zAccount";
 $template->header ="zAccount Ver 1";
 
-
-
 //button
 $button = new stdClass();
 
 $button->dashboard = "Dashboard";
 $button->salary = "Salary";
 $button->income = "Income";
+$button->expenses = "Expenses";
 $button->cashbook = "Cash Book";
-$button->bank = "Bank";
+$button->bank = "Bank Book";
 $button->bank_statement = "Bank Statement";
-
+$button->setting ="Setting";
+$button->budget ="Budget";
 
 
 

@@ -7,21 +7,16 @@
  */
 include_once "config/config.module";
 include_once "global/data.connection.module";
+include_once "global/function.module";
 include_once "language/url.module";
 include_once "language/language.module";
 
-if ($_GET['lang'] === "en"){
-   require "language/". AppLang::en_us();
-}else{
-    echo "error";
-
-}
 
 if (isset($_REQUEST['page'])){
     //echo"display page";
       require "page.module";
-}elseif (isset($_REQUEST['module'])) {
-
+}elseif (isset($_REQUEST['submit'])) {
+    require "model/model.module";
 }else{
   //  require "language/en_us.php";
   //  require "template/dashboard.phtml";

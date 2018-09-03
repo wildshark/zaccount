@@ -196,7 +196,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="card  card-tasks">
                         <div class="card-header ">
                             <h5 class="card-category">Backend development</h5>
@@ -279,7 +279,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <div class="card">
                         <div class="card-header">
                             <h5 class="card-category">All Persons List</h5>
@@ -290,89 +290,20 @@
                                 <table class="table">
                                     <thead class=" text-primary">
                                     <th>
-                                        Name
+                                        Date
                                     </th>
                                     <th>
-                                        Country
+                                        Book
                                     </th>
                                     <th>
-                                        City
+                                        Transaction
                                     </th>
                                     <th class="text-right">
-                                        Salary
+                                        Amount
                                     </th>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>
-                                            Dakota Rice
-                                        </td>
-                                        <td>
-                                            Niger
-                                        </td>
-                                        <td>
-                                            Oud-Turnhout
-                                        </td>
-                                        <td class="text-right">
-                                            $36,738
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Minerva Hooper
-                                        </td>
-                                        <td>
-                                            Curaçao
-                                        </td>
-                                        <td>
-                                            Sinaai-Waas
-                                        </td>
-                                        <td class="text-right">
-                                            $23,789
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Sage Rodriguez
-                                        </td>
-                                        <td>
-                                            Netherlands
-                                        </td>
-                                        <td>
-                                            Baileux
-                                        </td>
-                                        <td class="text-right">
-                                            $56,142
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Doris Greene
-                                        </td>
-                                        <td>
-                                            Malawi
-                                        </td>
-                                        <td>
-                                            Feldkirchen in Kärnten
-                                        </td>
-                                        <td class="text-right">
-                                            $63,542
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Mason Porter
-                                        </td>
-                                        <td>
-                                            Chile
-                                        </td>
-                                        <td>
-                                            Gloucester
-                                        </td>
-                                        <td class="text-right">
-                                            $78,615
-                                        </td>
-                                    </tr>
+                                        <?php transaction_display($conn);?>
                                     </tbody>
                                 </table>
                             </div>

@@ -1,0 +1,28 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Andrew Quaye
+ * Date: 02/09/2018
+ * Time: 9:57 AM
+ */
+
+include_once "income.module";
+include_once "expenses.module";
+include_once "user.ip.info.module";
+
+if ($_POST['submit'] === 'add income'){
+    income::add_data($conn);
+}elseif ($_POST['submit'] ==='edit income'){
+    income::edit_data($conn);
+}elseif ($_POST['submit'] ==="delete-income"){
+    income::delete($conn);
+}elseif ($_POST['submit']==="add expenses"){
+    expenses::add_data($conn);
+}elseif ($_POST['submit']==="edit expenses"){
+    expenses::edit_data($conn);
+}elseif ($_POST['submit']==="delete"){
+    expenses::delete($conn);
+}elseif ($_POST['submit']==="add category income"){
+    setting::add_data($conn);
+}
+

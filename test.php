@@ -5,8 +5,47 @@
  * Date: 02/09/2018
  * Time: 4:09 AM
  */
+
+include_once "config/config.module";
+include_once "global/data.connection.module";
+
+
+function expense_data_sheet($conn){
+
+    $data ="SELECT * FROM `get_income_category` LIMIT 0, 1000";
+    $result = $conn->query($data);
+    if ($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+            echo"
+            <tr>
+                <td class='text-center'>1</td>
+                <td>{$row['category']}</td>
+                <td>{$row['bookID']}</td>
+                <td>2013</td>
+                <td class='text-right'>&euro; 99,225</td>
+                <td class='td-actions text-right'>
+                    <button type='button' rel='tooltip' class='btn btn-info btn-sm btn-icon'>
+                        <i class='now-ui-icons users_single-02'></i>
+                    </button>
+                    <button type='button' rel='tooltip' class='btn btn-success btn-sm btn-icon'>
+                        <i class='now-ui-icons ui-2_settings-90'></i>
+                    </button>
+                    <button type='button' rel='tooltip' class='btn btn-danger btn-sm btn-icon'>
+                        <i class='now-ui-icons ui-1_simple-remove'></i>
+                    </button>
+                </td>
+            </tr>
+        ";
+        }
+    }else{
+        echo "No Categories";
+    }
+}
+expense_data_sheet($conn);
+
+
 ?>
-<div class="col-md-8">
+<!--div class="col-md-8">
     <div class="card">
         <div class="card-header">
             <h5 class="title">Edit Profile</h5>
@@ -121,4 +160,4 @@
             </button>
         </div>
     </div>
-</div>
+</div--!>

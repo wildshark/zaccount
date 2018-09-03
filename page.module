@@ -6,19 +6,61 @@
  * Time: 2:26 AM
  */
 
+include_once "model/data.module";
+
 if (isset($_POST['page'])){
     $page = $_POST['page'];
 }else{
     $page = $_GET['page'];
 }
 
+if ($_GET['lang'] === "en"){
+    require "language/". AppLang::en_us();
+}else{
+    require "language/". AppLang::en_us();
+
+}
+
 switch ($page){
+
     case"dashboard";
         require "template/dashboard.phtml";
     break;
-    case "salary";
-        $template->title ="Salary book";
-        $template->content ="view/salary.php";
+
+    case "income";
+        $template->title ="Income Book";
+        $template->content ="view/income.phtml";
         require "template/form.php";
     break;
+
+    case"expenses";
+        $template->title ="Expenses Book";
+        $template->content ="view/expenses.phtml";
+        require "template/form.php";
+    break;
+
+    case"bank";
+        $template->title ="Bank Book";
+        $template->content ="view/bank.phtml";
+        require "template/table.php";
+    break;
+
+    case"cash-book";
+        $template->title ="Cash Book";
+        $template->content ="view/bank.phtml";
+        require "template/table.php";
+    break;
+
+    case "budget";
+        $template->title ="Budget Book";
+        $template->content ="view/budget.phtml";
+        require "template/form.php";
+    break;
+
+    case"setting";
+        $template->title ="Setting";
+        $template->content ="view/setting.phtml";
+        require "template/form.php";
+    break;
+
 }

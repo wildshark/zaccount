@@ -1,0 +1,139 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Andrew Quaye
+ * Date: 02/09/2018
+ * Time: 6:56 PM
+ */
+
+function transaction_display($conn){
+    $data ="SELECT * FROM `get_transaction_status` LIMIT 0, 1000";
+    $result = $conn->query($data);
+    if ($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+            echo"
+            <tr>
+                <td>{$row['date']}</td>
+                <td>{$row['book']}</td>
+                <td>{$row['category']}</td>
+                <td class='text-right'>{$row['balance']}</td>
+            </tr>
+        ";
+        }
+    }
+
+}
+
+function income_category_sheet($conn){
+
+    $data ="SELECT * FROM `get_income_category` LIMIT 0, 1000";
+    $result = $conn->query($data);
+    if ($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+            echo"
+            <tr>
+                <td class='text-center'>{$row['cat_code']}</td>
+                <td>{$row['category']}</td>
+                <td>{$row['bookID']}</td>
+                <td>2013</td>
+                <td class='text-right'>&euro; 99,225</td>
+                <td class='td-actions text-right'>
+                    <button type='button' rel='tooltip' class='btn btn-info btn-sm btn-icon'>
+                        <i class='now-ui-icons users_single-02'></i>
+                    </button>
+                    <button type='button' rel='tooltip' class='btn btn-success btn-sm btn-icon'>
+                        <i class='now-ui-icons ui-2_settings-90'></i>
+                    </button>
+                    <button type='button' rel='tooltip' class='btn btn-danger btn-sm btn-icon'>
+                        <i class='now-ui-icons ui-1_simple-remove'></i>
+                    </button>
+                </td>
+            </tr>
+        ";
+        }
+    }else{
+       // echo "No Categories";
+    }
+}
+
+function expenses_category_sheet($conn){
+
+    $data ="SELECT * FROM `get_expenses_category`";
+    $result = $conn->query($data);
+    if ($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+            echo"
+            <tr>
+                <td class='text-center'>{$row['cat_code']}</td>
+                <td>{$row['category']}</td>
+                <td>{$row['bookID']}</td>
+                <td>2013</td>
+                <td class='text-right'>&euro; 99,225</td>
+                <td class='td-actions text-right'>
+                    <button type='button' rel='tooltip' class='btn btn-info btn-sm btn-icon'>
+                        <i class='now-ui-icons users_single-02'></i>
+                    </button>
+                    <button type='button' rel='tooltip' class='btn btn-success btn-sm btn-icon'>
+                        <i class='now-ui-icons ui-2_settings-90'></i>
+                    </button>
+                    <button type='button' rel='tooltip' class='btn btn-danger btn-sm btn-icon'>
+                        <i class='now-ui-icons ui-1_simple-remove'></i>
+                    </button>
+                </td>
+            </tr>
+        ";
+        }
+    }else{
+       // echo "No Categories";
+    }
+}
+
+function bank_book_sheet($conn){
+
+    $data ="SELECT * FROM `get_bank`";
+    $result = $conn->query($data);
+    while($row = $result->fetch_assoc()){
+        echo"
+            <tr>
+                <td class='text-center'>{$row['sdate']}</td>
+                <td>{$row['category']}</td>
+                <td>{$row['detail']}</td>
+                <td>{$row['ref']}</td>
+                <td class='text-right'>{$row['b_debt']}</td>
+                <td class='text-right'>{$row['b_credit']}</td>
+                <td class='td-actions text-right'>
+                    <button type='submit' name='delete' value='{$row['legID']}' rel='tooltip' class='btn btn-danger btn-sm btn-icon'>
+                        <i class='now-ui-icons ui-1_simple-remove'></i>
+                    </button>
+                </td>
+            </tr>
+        ";
+    }
+}
+
+function cash_book_sheet($conn){
+
+    $data ="SELECT * FROM `get_cashbook`";
+    $result = $conn->query($data);
+    if ($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+            echo"
+            <tr>
+                <td class='text-center'>{$row['sdate']}</td>
+                <td>{$row['category']}</td>
+                <td>{$row['detail']}</td>
+                <td>{$row['ref']}</td>
+                <td class='text-right'>{$row['c_debt']}</td>
+                <td class='text-right'>{$row['c_credit']}</td>
+                <td class='td-actions text-right'>
+                    <button type='button' rel='tooltip' class='btn btn-danger btn-sm btn-icon'>
+                        <i class='now-ui-icons ui-1_simple-remove'></i>
+                    </button>
+                </td>
+            </tr>
+        ";
+        }
+    }else{
+        // echo "No Categories";
+    }
+}
