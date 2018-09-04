@@ -5,3 +5,13 @@
  * Date: 02/09/2018
  * Time: 5:27 PM
  */
+
+if(!isset($_GET['lang'])){
+    header("location: index.php?page=login&lang=en");
+}else{
+    if ($_GET['lang'] === "en"){
+        require "language/". AppLang::en_us();
+    }else{
+        require "language/". AppLang::en_us();
+    }
+}

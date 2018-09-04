@@ -7,7 +7,7 @@
  */
 
 function transaction_display($conn){
-    $data ="SELECT * FROM `get_transaction_status` LIMIT 0, 1000";
+    $data ="SELECT * FROM `get_ledger_book` LIMIT 0, 1000";
     $result = $conn->query($data);
     if ($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
@@ -22,6 +22,58 @@ function transaction_display($conn){
         }
     }
 
+}
+
+function transaction_display_income($conn){
+
+    $data ="SELECT * FROM `get_income` ORDER BY legID DESC";
+    $result = $conn->query($data);
+    if ($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+            echo"
+                 <tr>
+                    <td>{$row['date']}</td>
+                    <td>{$row['ref']}</td>
+                    <td>{$row['category']}</td>
+                    <td class='text-right'>{$row['balance']}</td>
+                    <td class='td-actions text-right'>
+                        <button type='submit' name='' rel='tooltip' class='btn btn-success btn-sm btn-round btn-icon'>
+                            <i class='now-ui-icons design-2_ruler-pencil'></i>
+                        </button>
+                        <button type='button' rel='tooltip' class='btn btn-danger btn-sm btn-round btn-icon'>
+                            <i class='now-ui-icons ui-1_simple-remove'></i>
+                        </button>
+                    </td>
+                 </tr>
+            ";
+        }
+    }
+}
+
+function transaction_display_expenses($conn){
+
+    $data ="SELECT * FROM `get_expenses` ORDER BY legID DESC";
+    $result = $conn->query($data);
+    if ($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+            echo"
+                 <tr>
+                    <td>{$row['date']}</td>
+                    <td>{$row['ref']}</td>
+                    <td>{$row['category']}</td>
+                    <td class='text-right'>{$row['balance']}</td>
+                    <td class='td-actions text-right'>
+                        <button type='submit' name='' rel='tooltip' class='btn btn-success btn-sm btn-round btn-icon'>
+                            <i class='now-ui-icons design-2_ruler-pencil'></i>
+                        </button>
+                        <button type='button' rel='tooltip' class='btn btn-danger btn-sm btn-round btn-icon'>
+                            <i class='now-ui-icons ui-1_simple-remove'></i>
+                        </button>
+                    </td>
+                 </tr>
+            ";
+        }
+    }
 }
 
 function income_category_sheet($conn){
@@ -136,4 +188,59 @@ function cash_book_sheet($conn){
     }else{
         // echo "No Categories";
     }
+}
+
+function budget_book_sheet($conn){
+
+    $data ="SELECT * FROM `get_budget` ORDER BY budgetID DESC";
+    $result = $conn->query($data);
+    if ($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+            if ($row['b_month'] == 1){
+                $month ="Jan";
+            }elseif ($row['b_month'] == 2){
+                $month ="Feb";
+            }elseif ($row['b_month'] == 3) {
+                $month = "Mar";
+            }elseif ($row['b_month'] == 4) {
+                $month = "Apr";
+            }elseif ($row['b_month'] == 5) {
+                $month = "May";
+            }elseif ($row['b_month'] == 6) {
+                $month = "Jun";
+            }elseif ($row['b_month'] == 7) {
+                $month = "Jul";
+            }elseif ($row['b_month'] == 8) {
+                $month = "Aug";
+            }elseif ($row['b_month'] == 9) {
+                $month = "Sept";
+            }elseif ($row['b_month'] == 10){
+                $month ="Oct";
+            }elseif ($row['b_month'] == 11){
+                $month ="Nov";
+            }elseif ($row['b_month'] == 12){
+                $month ="Dec";
+            }
+
+            $period = $month ."/". $row['b_year'];
+            echo"
+                 <tr>
+                    <td>{$period}</td>
+                    <td>{$row['category']}</td>
+                    <td>{$row['ref']}</td>
+                    <td class='text-right'>{$row['amount']}</td>
+                    <td class='td-actions text-right'>
+                        <button type='submit' name='' rel='tooltip' class='btn btn-success btn-sm btn-round btn-icon'>
+                            <i class='now-ui-icons design-2_ruler-pencil'></i>
+                        </button>
+                        <button type='button' rel='tooltip' class='btn btn-danger btn-sm btn-round btn-icon'>
+                            <i class='now-ui-icons ui-1_simple-remove'></i>
+                        </button>
+                    </td>
+                 </tr>
+            ";
+        }
+    }
+
+
 }

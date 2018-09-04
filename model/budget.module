@@ -1,0 +1,76 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Andrew Quaye
+ * Date: 03/09/2018
+ * Time: 7:01 AM
+ */
+
+class budget{
+
+    private static function Language(){
+
+        if (isset($_SESSION['lang'])){
+            $lang = $_SESSION['lang'];
+        }else{
+            $lang ="en";
+        }
+        return $lang;
+    }
+
+    public static function add_budget($conn){
+
+        $month = $_POST['month'];
+        $year = $_POST['year'];
+        $categoryID = $_POST['category'];
+        $details = $_POST['detail'];
+        $type = $_POST['type'];
+        $ref = $_POST['ref'];
+        $amount = $_POST['amount'];
+
+        $lang = self::Language();
+        $now = date("Y/m/d");
+
+         $add ="INSERT INTO `budget` (`cataID`, `b_date`, `b_month`, `b_year`, `ref`, `details`, `payID`, `amount`) 
+VALUES ('$categoryID', '$now', '$month', '$year', '$ref', '$details', '$type', '$amount')";
+        $result = $conn->query($add);
+
+        if ($result == TRUE){
+            header("location: index.php?page=budget&lang=".$lang);
+        } else{
+            header("location: index.php?page=budget&lang=".$lang."&error=1");
+        }
+
+    }
+
+    public static  function edit_budget($conn){
+
+        $budgetID = $_SESSION['budgetID'];
+        $userID = $_SESSION['userID'];
+        $month = $_POST['month'];
+        $year = $_POST['year'];
+        $categoryID = $_POST['category'];
+        $details = $_POST['detail'];
+        $type = $_POST['type'];
+        //$ref = $_POST['ref'];
+        $amount = $_POST['amount'];
+
+        $lang = self::Language();
+        //$now = date("Y/m/d");
+
+        $update = "UPDATE `budget` SET `cataID`='$categoryID',`b_month`='$month', `b_year`='$year', `details`='$details', `payID`='$type', `amount`='$amount' WHERE (`budgetID`='$budgetID')";
+        $result = $conn->query($update);
+
+        if ($result == TRUE){
+            header("location: index.php?page=budget&lang=".$lang);
+        } else{
+            header("location: index.php?page=budget&lang=".$lang."&error=1");
+        }
+
+    }
+
+    public static  function delete_budget($conn){
+
+    }
+
+}

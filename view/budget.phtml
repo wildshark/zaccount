@@ -17,14 +17,17 @@
                 <div class="row">
                     <div class="col-md-6 pr-1">
                         <div class="form-group">
-                            <label>Date</label>
-                            <input type="date" name="date" class="form-control" placeholder="" value="">
+                            <label>Month</label>
+                            <select name="month" id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <?php calender_month($conn);?>
+                            </select>
                         </div>
                     </div>
                     <div class="col-md-6 pr-1">
                         <div class="form-group">
-                            <label>Categories</label>
-                            <select name="category" id="inputState" class="form-control">
+                            <label>Year</label>
+                            <select name="year" id="inputState" class="form-control">
                                 <option selected>Choose...</option>
                                 <?php calender_year($conn);?>
                             </select>
@@ -32,10 +35,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-5 pr-1">
+                    <div class="col-md-6 pr-1">
                         <div class="form-group">
                             <label>Ref#</label>
-                            <input type="text" name="ref" class="form-control" placeholder="" value="<?php echo "TI".rand();?>">
+                            <input type="text" name="ref" readonly class="form-control" placeholder="" value="<?php echo "BS".rand();?>">
+                        </div>
+                    </div>
+                    <div class="col-md-6 pr-1">
+                        <div class="form-group">
+                            <label>Budget Categories</label>
+                            <select name="category" id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <?php expenses_categories($conn);?>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -50,7 +62,7 @@
                 <div class="row">
                     <div class="col-md-6 pr-1">
                         <div class="form-group">
-                            <label>Pay type</label>
+                            <label>Mode of payment</label>
                             <select name="type" id="inputState" class="form-control">
                                 <option selected>Choose...</option>
                                 <?php payment_type($conn);?>
@@ -66,7 +78,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 pr-1">
-                        <button type="submit" name="submit" value="add income" class="btn btn-primary">Submit</button>
+                        <button type="submit" name="submit" value="add budget" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
             </form>
@@ -75,25 +87,20 @@
 </div>
 <div class="col-md-6">
     <div class="card card-user">
-        <div class="image">
-            <img src="assets/img/bg5.jpg" alt="...">
-        </div>
-        <div class="card-body">
-            <div class="author">
-                <a href="#">
-                    <img class="avatar border-gray" src="assets/img/mike.jpg" alt="...">
-                    <h5 class="title">Mike Andrew</h5>
-                </a>
-                <p class="description">
-                    michael24
-                </p>
-            </div>
-            <p class="description text-center">
-                "Lamborghini Mercy
-                <br> Your chick she so thirsty
-                <br> I'm in that two seat Lambo"
-            </p>
-        </div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Period</th>
+                <th>Budget</th>
+                <th>Ref#</th>
+                <th class="text-right">Amount</th>
+                <th class="text-right">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                <?php budget_book_sheet($conn);?>
+            </tbody>
+        </table>
         <hr>
         <div class="button-container">
             <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">

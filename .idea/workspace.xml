@@ -2,33 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88f4eb4e-ea34-4a24-9cb1-17c58507c46c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/global/session.module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/data.module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/expenses.module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/income.module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/model.module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/setting.module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/user.ip.info.module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/bank.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/budget.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cashbook.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/expenses.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/setting.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/budget.module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/login.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/register.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/profile.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.module" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global/data.connection.module" beforeDir="false" afterPath="$PROJECT_DIR$/global/data.connection.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/now-ui-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/css/now-ui-dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/now-ui-dashboard.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/css/now-ui-dashboard.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/now-ui-dashboard.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/css/now-ui-dashboard.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/demo/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/demo/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/nucleo-license.md" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/fonts/nucleo-license.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/nucleo-outline.eot" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/fonts/nucleo-outline.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/nucleo-outline.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/fonts/nucleo-outline.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/nucleo-outline.woff" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/fonts/nucleo-outline.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/nucleo-outline.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/fonts/nucleo-outline.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/apple-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/img/apple-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bg5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/img/bg5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/default-avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/img/default-avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/img/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/img/header.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/mike.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/img/mike.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/now-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/img/now-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/core/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/js/core/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/core/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/js/core/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/core/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/js/core/popper.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/now-ui-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/js/now-ui-dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/now-ui-dashboard.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/js/now-ui-dashboard.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/now-ui-dashboard.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/js/now-ui-dashboard.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/plugins/bootstrap-notify.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/js/plugins/bootstrap-notify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/plugins/chartjs.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/js/plugins/chartjs.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/plugins/perfect-scrollbar.jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/js/plugins/perfect-scrollbar.jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_alerts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_alerts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_cards.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_checkboxes-radio.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_checkboxes-radio.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_fixed-plugin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_fixed-plugin.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_footers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_footers.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_images.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_images.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_inputs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_inputs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_misc.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_misc.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_nucleo-outline.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_nucleo-outline.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_page-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_page-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_responsive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_sidebar-and-main-panel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_sidebar-and-main-panel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_tables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_tables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/cards/_card-chart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/cards/_card-chart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/cards/_card-map.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/cards/_card-map.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/cards/_card-plain.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/cards/_card-plain.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/cards/_card-user.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/cards/_card-user.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/mixins/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/mixins/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/mixins/_cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/mixins/_cards.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/mixins/_dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/mixins/_dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/mixins/_inputs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/mixins/_inputs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/mixins/_page-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/mixins/_page-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/mixins/_transparency.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/mixins/_transparency.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/mixins/_vendor-prefixes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/mixins/_vendor-prefixes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/plugins/_plugin-animate-bootstrap-notify.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/plugins/_plugin-animate-bootstrap-notify.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/now-ui-dashboard/plugins/_plugin-perfect-scrollbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/assets2/scss/now-ui-dashboard/plugins/_plugin-perfect-scrollbar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/global/function.module" beforeDir="false" afterPath="$PROJECT_DIR$/global/function.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global/session.module" beforeDir="false" afterPath="$PROJECT_DIR$/global/session.module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/language/en_us.php" beforeDir="false" afterPath="$PROJECT_DIR$/language/en_us.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/language/language.module" beforeDir="false" afterPath="$PROJECT_DIR$/language/language.module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/language/url.module" beforeDir="false" afterPath="$PROJECT_DIR$/language/url.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/data.module" beforeDir="false" afterPath="$PROJECT_DIR$/model/data.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model.module" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page.module" beforeDir="false" afterPath="$PROJECT_DIR$/page.module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/dashboard.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/template/dashboard.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/side.menu.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/template/side.menu.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/table.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/budget.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/view/budget.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/expenses.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/view/expenses.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/income.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/view/income.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/salary.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/salary.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,58 +91,86 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="3">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file leaf-file-name="income.phtml" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/view/income.phtml">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="96">
+                    <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="url.module" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/language/url.module">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="85">
+                    <caret line="10" column="41" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="41" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="en_us.php" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/language/en_us.php">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="374">
+                    <caret line="27" selection-start-line="27" selection-end-line="27" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="budget.phtml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/budget.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data.module" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/data.module">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1751">
-              <caret line="108" column="17" lean-forward="true" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function.module" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/global/function.module">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="page.module" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+            <state relative-caret-position="170">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="en_us.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/language/en_us.php">
+      <file leaf-file-name="register.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/register.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="-527">
+              <caret line="186" column="54" selection-start-line="186" selection-start-column="54" selection-end-line="186" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="income.phtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/income.phtml">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="108" column="6" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="108" selection-end-column="6" />
+            <state relative-caret-position="348">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="language.module" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/language/language.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="session.module" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/global/session.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -99,10 +181,18 @@
     <findStrings>
       <find>&quot;../</find>
       <find>\&quot;</find>
+      <find>#pablo</find>
+      <find>assets/</find>
+      <find>../assets/</find>
+      <find>assets2/</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
       <replace>'</replace>
+      <replace>&lt;?php echo $url-&gt;profile;?&gt;</replace>
+      <replace>assets2/</replace>
+      <replace>plugin/assets1/</replace>
+      <replace>plugin/assets2/</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -112,33 +202,39 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/view/dashboard.phtml" />
-        <option value="$PROJECT_DIR$/language/language.module" />
-        <option value="$PROJECT_DIR$/template/form.php" />
         <option value="$PROJECT_DIR$/view/salary.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/model/user.ip.info.module" />
         <option value="$PROJECT_DIR$/global/data.connection.module" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/config/config.module" />
-        <option value="$PROJECT_DIR$/view/income.phtml" />
         <option value="$PROJECT_DIR$/model/income.module" />
         <option value="$PROJECT_DIR$/model/expenses.module" />
-        <option value="$PROJECT_DIR$/view/expenses.phtml" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/model/setting.module" />
         <option value="$PROJECT_DIR$/view/setting.phtml" />
-        <option value="$PROJECT_DIR$/template/dashboard.phtml" />
-        <option value="$PROJECT_DIR$/template/table.php" />
         <option value="$PROJECT_DIR$/view/cashbook.phtml" />
-        <option value="$PROJECT_DIR$/model/data.module" />
         <option value="$PROJECT_DIR$/view/bank.phtml" />
-        <option value="$PROJECT_DIR$/model/model.module" />
-        <option value="$PROJECT_DIR$/language/url.module" />
         <option value="$PROJECT_DIR$/template/side.menu.phtml" />
-        <option value="$PROJECT_DIR$/page.module" />
-        <option value="$PROJECT_DIR$/language/en_us.php" />
         <option value="$PROJECT_DIR$/global/function.module" />
+        <option value="$PROJECT_DIR$/model/model.module" />
+        <option value="$PROJECT_DIR$/model/budget.module" />
         <option value="$PROJECT_DIR$/view/budget.phtml" />
+        <option value="$PROJECT_DIR$/view/income.phtml" />
+        <option value="$PROJECT_DIR$/view/expenses.phtml" />
+        <option value="$PROJECT_DIR$/model/data.module" />
+        <option value="$PROJECT_DIR$/view/profile.phtml" />
+        <option value="$PROJECT_DIR$/template/table.php" />
+        <option value="$PROJECT_DIR$/template/form.php" />
+        <option value="$PROJECT_DIR$/template/dashboard.phtml" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/index.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/template/register.phtml" />
+        <option value="$PROJECT_DIR$/language/url.module" />
+        <option value="$PROJECT_DIR$/language/en_us.php" />
+        <option value="$PROJECT_DIR$/template/login.phtml" />
+        <option value="$PROJECT_DIR$/language/language.module" />
+        <option value="$PROJECT_DIR$/page.module" />
+        <option value="$PROJECT_DIR$/global/session.module" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -221,6 +317,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\zaccount\plugin" />
       <recent name="D:\xampp\htdocs\zaccount\model" />
       <recent name="D:\xampp\htdocs\zaccount" />
       <recent name="D:\xampp\htdocs\zaccount\template" />
@@ -250,28 +347,28 @@
       <updated>1535569323805</updated>
       <workItem from="1535569327134" duration="594000" />
       <workItem from="1535653101048" duration="11334000" />
-      <workItem from="1535841840439" duration="44552000" />
+      <workItem from="1535841840439" duration="74765000" />
+      <workItem from="1536037321486" duration="2975000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56480000" />
+    <option name="totallyTimeSpent" value="89668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30257186" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32991454" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32991454" />
+      <window_info anchor="right" id="Database" order="5" weight="0.26172465" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32991454" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2987897" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="5" weight="0.26172465" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.43396226" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.24901961" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32991454" />
       <window_info id="Favorites" order="1" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="1" visible="true" weight="0.47350428" />
@@ -279,36 +376,37 @@
       <window_info anchor="right" id="Remote Host" order="0" weight="0.3290469" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.43396226" />
       <window_info anchor="right" x="605" y="350" width="444" height="168" id="Documentation" order="4" type="FLOATING" weight="0.32977098" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32991454" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="1" visible="true" weight="0.47350428" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="0" weight="0.3290469" />
+      <window_info id="Favorites" order="1" side_tool="true" weight="0.32980332" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2987897" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.24901961" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32991454" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.43396226" />
       <window_info anchor="right" x="605" y="350" width="444" height="168" id="Documentation" order="4" type="FLOATING" weight="0.32977098" />
       <window_info anchor="right" id="Database" order="5" weight="0.26172465" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32991454" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32991454" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32991454" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="1" side_tool="true" weight="0.32980332" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,31 +417,56 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/date/date.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3807">
-          <caret line="1320" column="9" selection-start-line="1320" selection-start-column="9" selection-end-line="1320" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/global/session.module">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="1139">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/url.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/dashboard.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6188">
+          <caret line="364" column="67" selection-start-line="364" selection-start-column="67" selection-end-line="364" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/register.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3162">
+          <caret line="186" column="54" lean-forward="true" selection-start-line="186" selection-start-column="54" selection-end-line="186" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/expenses.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="167" column="28" selection-start-line="167" selection-start-column="28" selection-end-line="167" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -354,10 +477,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/expenses.module">
+    <entry file="file://$PROJECT_DIR$/config/config.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="18" selection-start-line="18" selection-end-line="19" />
+        <state relative-caret-position="68">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/login.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3621">
+          <caret line="213" column="38" selection-start-line="213" selection-start-column="38" selection-end-line="213" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/income.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="72" column="10" lean-forward="true" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/date/date.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3807">
+          <caret line="1320" column="9" selection-start-line="1320" selection-start-column="9" selection-end-line="1320" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -379,9 +523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="42" column="1" lean-forward="true" selection-start-line="12" selection-end-line="42" selection-end-column="1" />
-          <folding>
-            <element signature="e#220#226#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -406,27 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/dashboard.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="308" column="34" lean-forward="true" selection-start-line="308" selection-start-column="34" selection-end-line="308" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="119" column="56" lean-forward="true" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="118" column="52" selection-start-line="118" selection-start-column="52" selection-end-line="118" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/bank.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -441,20 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/language/url.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/model.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/side.menu.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -462,66 +568,180 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/language/language.module">
+    <entry file="file://$PROJECT_DIR$/view/budget.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="100" column="49" lean-forward="true" selection-start-line="88" selection-start-column="4" selection-end-line="115" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/budget.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/data.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="230" column="43" selection-start-line="230" selection-start-column="43" selection-end-line="230" selection-end-column="43" />
+          <folding>
+            <element signature="n#income_category_sheet#0;n#!!top" />
+            <element signature="n#expenses_category_sheet#0;n#!!top" />
+            <element signature="n#bank_book_sheet#0;n#!!top" />
+            <element signature="n#cash_book_sheet#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/profile.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="105" column="34" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="167" column="28" selection-start-line="167" selection-start-column="28" selection-end-line="167" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/global/data.connection.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/income.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/expenses.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="87" column="46" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="169" column="20" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
+          <folding>
+            <element signature="e#6750#6756#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/expenses.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/url.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/global/function.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/model.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/dashboard.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="364" column="67" selection-start-line="364" selection-start-column="67" selection-end-line="364" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/en_us.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/register.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-527">
+          <caret line="186" column="54" selection-start-line="186" selection-start-column="54" selection-end-line="186" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/login.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3385">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page.module">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/expenses.phtml">
+    <entry file="file://$PROJECT_DIR$/global/session.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="92" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="92" />
+        <state relative-caret-position="68">
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/language.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/income.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="108" column="6" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="108" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/language/en_us.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/data.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="108" column="17" lean-forward="true" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/global/function.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/budget.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+        <state relative-caret-position="348">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>

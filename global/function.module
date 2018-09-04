@@ -13,6 +13,17 @@ function calender_year($conn){
         echo "<option value='".$row['c_year']."'>".$row['c_year']."</option>";
     }
 }
+
+function calender_month($conn){
+
+    $sql ="SELECT * FROM get_calender_month";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()){
+        echo "<option value='".$row['monthID']."'>".$row['c_month']."</option>";
+    }
+}
+
+
 function income_categories($conn){
 
     $sql="SELECT * FROM get_income_category";

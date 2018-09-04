@@ -24,6 +24,10 @@ $button->bank = "Bank Book";
 $button->bank_statement = "Bank Statement";
 $button->setting ="Setting";
 $button->budget ="Budget";
+$button->profile ="Profile";
 
+
+$button->recovery ="Forgot password?";
+$button->create="Create new account";
 
 

@@ -8,6 +8,8 @@
 
 $url = new stdClass();
 
+$url->register = "index.php?page=register&lang=en";
+$url->recovery ="index.php?page=recovery&lang=en";
 $url->dashboard = "index.php?page=dashboard&lang=en";
 $url->income ="index.php?page=income&lang=en";
 $url->expenses ="index.php?page=expenses&lang=en";
@@ -16,3 +18,4 @@ $url->cashbook = "index.php?page=cash-book&lang=en";
 $url->bank = "index.php?page=bank&lang=en";
 $url->budget ="index.php?page=budget&lang=en";
 $url->setting ="index.php?page=setting&lang=en";
+$url->profile ="index.php?page=profile&lang=en";

@@ -14,14 +14,15 @@ if (isset($_POST['page'])){
     $page = $_GET['page'];
 }
 
-if ($_GET['lang'] === "en"){
-    require "language/". AppLang::en_us();
-}else{
-    require "language/". AppLang::en_us();
-
-}
-
 switch ($page){
+
+    case "register";
+        require "template/register.phtml";
+    break;
+
+    case "login";
+        require "template/login.phtml";
+    break;
 
     case"dashboard";
         require "template/dashboard.phtml";
@@ -60,6 +61,12 @@ switch ($page){
     case"setting";
         $template->title ="Setting";
         $template->content ="view/setting.phtml";
+        require "template/form.php";
+    break;
+
+    case"profile";
+        $template->title ="Profile";
+        $template->content ="view/profile.phtml";
         require "template/form.php";
     break;
 
