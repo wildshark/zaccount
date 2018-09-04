@@ -14,60 +14,70 @@ if (isset($_POST['page'])){
     $page = $_GET['page'];
 }
 
-switch ($page){
+if (isset($_GET['token'])){
+    if ($_SESSION['token'] === $_GET['token']){
+        switch ($page){
 
-    case "register";
-        require "template/register.phtml";
-    break;
+            case "register";
+                require "template/register.phtml";
+                break;
 
-    case "login";
+            case "login";
+                require "template/login.phtml";
+                break;
+
+            case"dashboard";
+                require "template/dashboard.phtml";
+                break;
+
+            case "income";
+                $template->title ="Income Book";
+                $template->content ="view/income.phtml";
+                require "template/form.php";
+                break;
+
+            case"expenses";
+                $template->title ="Expenses Book";
+                $template->content ="view/expenses.phtml";
+                require "template/form.php";
+                break;
+
+            case"bank";
+                $template->title ="Bank Book";
+                $template->content ="view/bank.phtml";
+                require "template/table.php";
+                break;
+
+            case"cash-book";
+                $template->title ="Cash Book";
+                $template->content ="view/bank.phtml";
+                require "template/table.php";
+                break;
+
+            case "budget";
+                $template->title ="Budget Book";
+                $template->content ="view/budget.phtml";
+                require "template/form.php";
+                break;
+
+            case"setting";
+                $template->title ="Setting";
+                $template->content ="view/setting.phtml";
+                require "template/form.php";
+                break;
+
+            case"profile";
+                $template->title ="Profile";
+                $template->content ="view/profile.phtml";
+                require "template/form.php";
+                break;
+
+        }
+    }else{
         require "template/login.phtml";
-    break;
-
-    case"dashboard";
-        require "template/dashboard.phtml";
-    break;
-
-    case "income";
-        $template->title ="Income Book";
-        $template->content ="view/income.phtml";
-        require "template/form.php";
-    break;
-
-    case"expenses";
-        $template->title ="Expenses Book";
-        $template->content ="view/expenses.phtml";
-        require "template/form.php";
-    break;
-
-    case"bank";
-        $template->title ="Bank Book";
-        $template->content ="view/bank.phtml";
-        require "template/table.php";
-    break;
-
-    case"cash-book";
-        $template->title ="Cash Book";
-        $template->content ="view/bank.phtml";
-        require "template/table.php";
-    break;
-
-    case "budget";
-        $template->title ="Budget Book";
-        $template->content ="view/budget.phtml";
-        require "template/form.php";
-    break;
-
-    case"setting";
-        $template->title ="Setting";
-        $template->content ="view/setting.phtml";
-        require "template/form.php";
-    break;
-
-    case"profile";
-        $template->title ="Profile";
-        $template->content ="view/profile.phtml";
-        require "template/form.php";
-    break;
-
+    }
+}else{
+    require "template/login.phtml";
 }
+
+

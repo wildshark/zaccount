@@ -101,7 +101,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo $url->profile;?>">
+                            <a class="nav-link" href="<?php echo $url->logout;?>">
                                 <i class="now-ui-icons media-1_button-power"></i>
                                 <p>
                                     <span class="d-lg-none d-md-block">Account</span>

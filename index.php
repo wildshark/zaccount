@@ -17,10 +17,14 @@ if (isset($_REQUEST['page'])){
       require "page.module";
 }elseif (isset($_REQUEST['submit'])) {
     require "model/model.module";
-}else{
+}elseif ($_REQUEST['login'] === "login"){
     session_unset();
     session_destroy();
-    header("location: index.php?page=login&lang=en");
+    include_once "template/login.phtml";
+}elseif ($_REQUEST['login']==="register"){
+    session_unset();
+    session_destroy();
+    include_once "template/register.phtml";
 }
 
 

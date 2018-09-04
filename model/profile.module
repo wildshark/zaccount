@@ -1,0 +1,15 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Andrew Quaye
+ * Date: 04/09/2018
+ * Time: 8:46 PM
+ */
+
+class profile{
+
+    public $username,$email,$name,$address,$city,$country,$postal,$about ='';
+
+
+
+}

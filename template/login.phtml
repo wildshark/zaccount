@@ -183,7 +183,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                         </div>
-                                        <input name="email" class="form-control" placeholder="Email" type="email">
+                                        <input name="username" required class="form-control" placeholder="Username" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -191,7 +191,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                         </div>
-                                        <input name="password" class="form-control" placeholder="Password" type="password">
+                                        <input name="password" required class="form-control" placeholder="Password" type="password">
                                     </div>
                                 </div>
                                 <div class="custom-control custom-control-alternative custom-checkbox">
@@ -201,7 +201,7 @@
                                     </label>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" name="submit" value="sign-in" class="btn btn-primary my-4">Sign in</button>
+                                    <button type="submit" name="submit" value="sign-in" class="btn btn-primary my-4"><?php echo $button->SignIn;?></button>
                                 </div>
                             </form>
                         </div>

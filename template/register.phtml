@@ -187,9 +187,17 @@
                                 <div class="form-group">
                                     <div class="input-group input-group-alternative">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                                         </div>
-                                        <input name="email" class="form-control" placeholder="Email" type="email">
+                                        <input name="full-name" required class="form-control" placeholder="First name Surname" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
+                                        </div>
+                                        <input  name="mobile" required class="form-control" placeholder="233540000001" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group mb-3">
@@ -197,7 +205,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                         </div>
-                                        <input name="email" class="form-control" placeholder="Email" type="email">
+                                        <input name="email" required class="form-control" placeholder="Email" type="email">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -205,17 +213,19 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                         </div>
-                                        <input name="password" class="form-control" placeholder="Password" type="password">
+                                        <input name="username" required class="form-control" placeholder="Username" type="text">
                                     </div>
                                 </div>
-                                <div class="custom-control custom-control-alternative custom-checkbox">
-                                    <input name="check" class="custom-control-input" id=" customCheckLogin" type="checkbox">
-                                    <label class="custom-control-label" for=" customCheckLogin">
-                                        <span>Remember me</span>
-                                    </label>
+                                <div class="form-group">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                        </div>
+                                        <input name="password" required class="form-control" placeholder="Password" type="password">
+                                    </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" name="submit" value="sign-in" class="btn btn-primary my-4">Sign in</button>
+                                    <button type="submit" name="submit" value="sign-up" class="btn btn-primary my-4"><?php echo $button->register;?></button>
                                 </div>
                             </form>
                         </div>

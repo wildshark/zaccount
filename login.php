@@ -12,77 +12,82 @@ class LogIn_Details{
 
     public $username ='';
     public $password ='';
-    public $fname ='';
-    public $sname ='';
+    public $name ='';
     public $email ='';
     public $mobile = '';
-    public $address ='';
+    public $lang ='en';
 
-    private function generate_token(){
-        $user =md5($this->username);
-        $password =md5($this->password);
-        $token = md5($user && $password);
+    public function user_login($conn){
 
-        return $token;
-    }
+        $user = $this->username;
+        $pwd = $this->password;
+        $language = $this->lang;
+        $pwd =md5($pwd);
+        $user_token = md5($pwd ." ". $user);
+        $sql ="SELECT * FROM `get_user` where token='$user_token'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0){
+            $row = $result->fetch_assoc();
+            if ($row['username'] === $user && $row['password'] === $pwd){
+                $_SESSION['token'] = $user_token;
+                $_SESSION['language'] = $language;
+                header("location: index.php?page=dashboard&lang={$language}&token={$user_token}");
+            }else{
+                session_unset();
+                session_destroy();
+                header("location: index.php?login=login&lang=en");
+            }
 
-    public function user_login(){
-
-        $this->username;
-        $this->password;
-        $user_token =md5($this->username && $this->password);
-        //$sql =""
+        }
     }
 
      function user_sign_up($conn){
 
-        $f_name = $this->fname;
-        $l_name = $this->sname;
-        $email = $this->email;//$_POST['email'];
+        $f_name = $this->name;
+        $email = $this->email;
         $mob = $this->mobile;
-        $pwd =$this->password; //$_POST['password'];
-
-         $token = self::generate_token();
+        $user = $this->username;
+        $pwd = $this->password;
+        $language = $this->lang;
+        $pwd = md5($pwd);
+        $user_token = md5($pwd." ".$user);
 
          //$lang = self::Language();
-         $sql ="INSERT INTO `user` (`fname`,`sname`,`email`,`mobile`, `password`, `token`) 
-VALUES ('$f_name','$l_name','$email','$mob','$pwd','$token')";
+         $sql ="INSERT INTO `user` (`fname`,`username`,`email`,`mobile`, `password`, `token`,`language`) 
+VALUES ('$f_name','$user','$email','$mob','$pwd','$user_token','$language')";
          $result = $conn->query($sql);
 
          if ($result == TRUE){
-             header("location: index.php?page=expenses&lang=en");
+             $_SESSION['token'] = $user_token;
+             header("location: index.php?page=dashboard&lang=en&token={$user_token}");
          } else{
-             header("location: index.php?page=expenses&lang=en&error=1");
+             header("location: index.php?login=login&lang=en&error=1");
          }
     }
 
 }
 
 $login = new LogIn_Details();
-/**
-if(isset($_POST['email'])){
-    $login->username = $_POST['email'];
-}else{
-    echo"no email";
+if ($_POST['submit'] === "sign-up"){
+
+    $login->email =$_POST['email'];
+    $login->username = $_POST['username'];
+    $login->password =$_POST['password'];
+    $login->name = $_POST['full-name'];
+    $login->mobile = $_POST['mobile'];
+    $login->user_sign_up($conn);
+
+}elseif($_POST['submit'] === "sign-in"){
+    if(isset($_POST['username'])){
+        $login->username = $_POST['username'];
+    }else{
+        header("location: index.php?page=login&lang=en");
+    }
+
+    if(isset($_POST['password'])){
+        $login->password = $_POST['password'];
+    }else{
+        header("location: index.php?page=login&lang=en");
+    }
+    $login->user_login($conn);
 }
-
-if(isset($_POST['password'])){
-    $login->password = $_POST['email'];
-}else{
-    echo"no email";
-}
-
-//$login->password = $_POST['password'];
-$login->user_login();
-**/
-
-//$login->user_sign_up();
-$login->email =$_POST['email'];
-$login->password =$_POST['password'];
-$login->fname = $_POST['fname'];
-$login->sname = $_POST['sname'];
-$login->mobile = $_POST['mobile'];
-//$login->address = $_POST['address'];
-
-
-$login->user_sign_up($conn);
