@@ -6,6 +6,10 @@
  * Time: 2:26 AM
  */
 
+
+include_once "global/function.module";
+include_once "language/url.module";
+//include_once "global/session.module";
 include_once "model/data.module";
 
 if (isset($_POST['page'])){

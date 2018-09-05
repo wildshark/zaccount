@@ -13,10 +13,7 @@ class AppLang{
     }
 
     public static function en_fr(){
-
+        return "";
     }
 
 }
-
-
-

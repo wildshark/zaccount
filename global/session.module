@@ -6,10 +6,11 @@
  * Time: 5:27 PM
  */
 
-if(!isset($_GET['lang'])){
+if(!isset( $_SESSION['language'])){
+   // echo "no language selected";
     header("location: index.php?login=login&lang=en");
 }else{
-    if ($_GET['lang'] === "en"){
+    if ( $_SESSION['language'] === "en"){
         require "language/". AppLang::en_us();
     }else{
         require "language/". AppLang::en_us();

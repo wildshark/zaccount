@@ -14,94 +14,109 @@ demo = {
   },
 
   initDocChart: function() {
-    chartColor = "#FFFFFF";
 
-    // General configuration for the charts with Line gradientStroke
-    gradientChartOptionsConfiguration = {
-      maintainAspectRatio: false,
-      legend: {
-        display: false
-      },
-      tooltips: {
-        bodySpacing: 4,
-        mode: "nearest",
-        intersect: 0,
-        position: "nearest",
-        xPadding: 10,
-        yPadding: 10,
-        caretPadding: 10
-      },
-      responsive: true,
-      scales: {
-        yAxes: [{
-          display: 0,
-          gridLines: 0,
-          ticks: {
-            display: false
-          },
-          gridLines: {
-            zeroLineColor: "transparent",
-            drawTicks: false,
-            display: false,
-            drawBorder: false
-          }
-        }],
-        xAxes: [{
-          display: 0,
-          gridLines: 0,
-          ticks: {
-            display: false
-          },
-          gridLines: {
-            zeroLineColor: "transparent",
-            drawTicks: false,
-            display: false,
-            drawBorder: false
-          }
-        }]
-      },
-      layout: {
-        padding: {
-          left: 0,
-          right: 0,
-          top: 15,
-          bottom: 15
-        }
-      }
-    };
+      $.ajax({
+          url: "http://localhost/zaccount/data.php",
+          method: "GET",
+          success: function(data) {
+              console.log(data);
+              var player = [];
+              var amount = [];
 
-    ctx = document.getElementById('lineChartExample').getContext("2d");
+              for (var i in data) {
+                  player.push(data[i].dateID);
+                  amount.push(data[i].balance);
+              }
+              chartColor = "#FFFFFF";
 
-    gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-    gradientStroke.addColorStop(0, '#80b6f4');
-    gradientStroke.addColorStop(1, chartColor);
+              // General configuration for the charts with Line gradientStroke
+              gradientChartOptionsConfiguration = {
+                  maintainAspectRatio: false,
+                  legend: {
+                      display: false
+                  },
+                  tooltips: {
+                      bodySpacing: 4,
+                      mode: "nearest",
+                      intersect: 0,
+                      position: "nearest",
+                      xPadding: 10,
+                      yPadding: 10,
+                      caretPadding: 10
+                  },
+                  responsive: true,
+                  scales: {
+                      yAxes: [{
+                          display: 0,
+                          gridLines: 0,
+                          ticks: {
+                              display: false
+                          },
+                          gridLines: {
+                              zeroLineColor: "transparent",
+                              drawTicks: false,
+                              display: false,
+                              drawBorder: false
+                          }
+                      }],
+                      xAxes: [{
+                          display: 0,
+                          gridLines: 0,
+                          ticks: {
+                              display: false
+                          },
+                          gridLines: {
+                              zeroLineColor: "transparent",
+                              drawTicks: false,
+                              display: false,
+                              drawBorder: false
+                          }
+                      }]
+                  },
+                  layout: {
+                      padding: {
+                          left: 0,
+                          right: 0,
+                          top: 15,
+                          bottom: 15
+                      }
+                  }
+              };
 
-    gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
-    gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-    gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
+              ctx = document.getElementById('lineChartExample').getContext("2d");
 
-    myChart = new Chart(ctx, {
-      type: 'line',
-      responsive: true,
-      data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        datasets: [{
-          label: "Active Users",
-          borderColor: "#f96332",
-          pointBorderColor: "#FFF",
-          pointBackgroundColor: "#f96332",
-          pointBorderWidth: 2,
-          pointHoverRadius: 4,
-          pointHoverBorderWidth: 1,
-          pointRadius: 4,
-          fill: true,
-          backgroundColor: gradientFill,
-          borderWidth: 2,
-          data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630]
-        }]
-      },
-      options: gradientChartOptionsConfiguration
-    });
+              gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+              gradientStroke.addColorStop(0, '#80b6f4');
+              gradientStroke.addColorStop(1, chartColor);
+
+              gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
+              gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
+              gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
+
+              myChart = new Chart(ctx, {
+                  type: 'line',
+                  responsive: true,
+                  data: {
+                      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                      datasets: [{
+                          label: "Active Users",
+                          borderColor: "#f96332",
+                          pointBorderColor: "#FFF",
+                          pointBackgroundColor: "#f96332",
+                          pointBorderWidth: 2,
+                          pointHoverRadius: 4,
+                          pointHoverBorderWidth: 1,
+                          pointRadius: 4,
+                          fill: true,
+                          backgroundColor: gradientFill,
+                          borderWidth: 2,
+                          data: amount
+                      }]
+                  },
+                  options: gradientChartOptionsConfiguration
+
+              });
+          });
   },
 
   initDashboardPageCharts: function() {
@@ -237,7 +252,7 @@ demo = {
           fill: true,
           backgroundColor: gradientFill,
           borderWidth: 2,
-          data: [50, 150, 100, 190, 130, 90, 150, 160, 120, 140, 190, 95]
+          data: [1, 13, 10, 19, 130, 90, 150, 160, 120, 140, 190, 95]
         }]
       },
       options: {
@@ -329,7 +344,7 @@ demo = {
           fill: true,
           backgroundColor: gradientFill,
           borderWidth: 2,
-          data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630]
+          data: [2,3,4,5,6,7,8]
         }]
       },
       options: gradientChartOptionsConfiguration

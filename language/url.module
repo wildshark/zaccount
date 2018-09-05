@@ -8,16 +8,22 @@
 
 $url = new stdClass();
 
+if (!isset($_SESSION['token'])){
+    $_SESSION['token'] = '';
+    $url->register = "index.php?login=register&lang=en";
+    $url->recovery ="index.php?login=recovery&lang=en";
+    $url->logout ="index.php?page=login&lang=en";
+}else{
+    $url->dashboard = "index.php?page=dashboard&lang=en&token={$_SESSION['token']}";
+    $url->income ="index.php?page=income&lang=en&token={$_SESSION['token']}";
+    $url->expenses ="index.php?page=expenses&lang=en&token={$_SESSION['token']}";
+    $url->salary = "index.php?page=salary&lang=en&token={$_SESSION['token']}";
+    $url->cashbook = "index.php?page=cash-book&lang=en&token={$_SESSION['token']}";
+    $url->bank = "index.php?page=bank&lang=en&token={$_SESSION['token']}";
+    $url->budget ="index.php?page=budget&lang=en&token={$_SESSION['token']}";
+    $url->setting ="index.php?page=setting&lang=en&token={$_SESSION['token']}";
+    $url->profile ="index.php?page=profile&lang=en&token={$_SESSION['token']}";
+    $url->logout ="index.php?page=login&lang=en&token={$_SESSION['token']}";
+}
 
-$url->register = "index.php?login=register&lang=en&token={$_SESSION['token']}";
-$url->recovery ="index.php?login=recovery&lang=en&token={$_SESSION['token']}";
-$url->dashboard = "index.php?page=dashboard&lang=en&token={$_SESSION['token']}";
-$url->income ="index.php?page=income&lang=en&token={$_SESSION['token']}";
-$url->expenses ="index.php?page=expenses&lang=en&token={$_SESSION['token']}";
-$url->salary = "index.php?page=salary&lang=en&token={$_SESSION['token']}";
-$url->cashbook = "index.php?page=cash-book&lang=en&token={$_SESSION['token']}";
-$url->bank = "index.php?page=bank&lang=en&token={$_SESSION['token']}";
-$url->budget ="index.php?page=budget&lang=en&token={$_SESSION['token']}";
-$url->setting ="index.php?page=setting&lang=en&token={$_SESSION['token']}";
-$url->profile ="index.php?page=profile&lang=en&token={$_SESSION['token']}";
-$url->logout ="index.php?page=login&lang=en&token={$_SESSION['token']}";
+

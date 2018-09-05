@@ -36,9 +36,9 @@ VALUES ('1', '1', '$categoryID', '$now', '$date', '$details','$type' ,'$ref', '$
         $result = $conn->query($add);
 
         if ($result == TRUE){
-            header("location: index.php?page=income&lang=".$lang);
+            header("location: index.php?page=income&lang=".$lang."&token=".$_SESSION['token']);
         } else{
-            header("location: index.php?page=income&lang=".$lang."&error=1");
+            header("location: index.php?page=income&lang=".$lang."&error=1&token=".$_SESSION['token']);
         }
 
     }

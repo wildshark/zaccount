@@ -6,6 +6,7 @@
  * Time: 9:57 AM
  */
 
+include_once "profile.module";
 include_once "income.module";
 include_once "expenses.module";
 include_once "budget.module";
@@ -27,5 +28,7 @@ if ($_POST['submit'] === 'add income'){
     setting::add_data($conn);
 }elseif($_POST['submit'] === "add budget"){
     budget::add_budget($conn);
+}elseif ($_POST['submit'] === "profile-update"){
+    profile::update_profile ($conn);
 }
 

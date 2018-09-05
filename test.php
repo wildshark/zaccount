@@ -9,155 +9,108 @@
 include_once "config/config.module";
 include_once "global/data.connection.module";
 
-
-function expense_data_sheet($conn){
-
-    $data ="SELECT * FROM `get_income_category` LIMIT 0, 1000";
-    $result = $conn->query($data);
-    if ($result->num_rows > 0){
-        while($row = $result->fetch_assoc()){
-            echo"
-            <tr>
-                <td class='text-center'>1</td>
-                <td>{$row['category']}</td>
-                <td>{$row['bookID']}</td>
-                <td>2013</td>
-                <td class='text-right'>&euro; 99,225</td>
-                <td class='td-actions text-right'>
-                    <button type='button' rel='tooltip' class='btn btn-info btn-sm btn-icon'>
-                        <i class='now-ui-icons users_single-02'></i>
-                    </button>
-                    <button type='button' rel='tooltip' class='btn btn-success btn-sm btn-icon'>
-                        <i class='now-ui-icons ui-2_settings-90'></i>
-                    </button>
-                    <button type='button' rel='tooltip' class='btn btn-danger btn-sm btn-icon'>
-                        <i class='now-ui-icons ui-1_simple-remove'></i>
-                    </button>
-                </td>
-            </tr>
-        ";
-        }
-    }else{
-        echo "No Categories";
-    }
-}
-expense_data_sheet($conn);
-
-
 ?>
-<!--div class="col-md-8">
-    <div class="card">
-        <div class="card-header">
-            <h5 class="title">Edit Profile</h5>
-        </div>
-        <div class="card-body">
-            <form>
-                <div class="row">
-                    <div class="col-md-5 pr-1">
-                        <div class="form-group">
-                            <label>Company (disabled)</label>
-                            <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
-                        </div>
-                    </div>
-                    <div class="col-md-3 px-1">
-                        <div class="form-group">
-                            <label>Username</label>
-                            <input type="text" class="form-control" placeholder="Username" value="michael23">
-                        </div>
-                    </div>
-                    <div class="col-md-4 pl-1">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 pr-1">
-                        <div class="form-group">
-                            <label>First Name</label>
-                            <input type="text" class="form-control" placeholder="Company" value="Mike">
-                        </div>
-                    </div>
-                    <div class="col-md-6 pl-1">
-                        <div class="form-group">
-                            <label>Last Name</label>
-                            <input type="text" class="form-control" placeholder="Last Name" value="Andrew">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Address</label>
-                            <input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 pr-1">
-                        <div class="form-group">
-                            <label>City</label>
-                            <input type="text" class="form-control" placeholder="City" value="Mike">
-                        </div>
-                    </div>
-                    <div class="col-md-4 px-1">
-                        <div class="form-group">
-                            <label>Country</label>
-                            <input type="text" class="form-control" placeholder="Country" value="Andrew">
-                        </div>
-                    </div>
-                    <div class="col-md-4 pl-1">
-                        <div class="form-group">
-                            <label>Postal Code</label>
-                            <input type="number" class="form-control" placeholder="ZIP Code">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>About Me</label>
-                            <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="card card-user">
-        <div class="image">
-            <img src="assets/img/bg5.jpg" alt="...">
-        </div>
-        <div class="card-body">
-            <div class="author">
-                <a href="#">
-                    <img class="avatar border-gray" src="assets/img/mike.jpg" alt="...">
-                    <h5 class="title">Mike Andrew</h5>
-                </a>
-                <p class="description">
-                    michael24
-                </p>
-            </div>
-            <p class="description text-center">
-                "Lamborghini Mercy
-                <br> Your chick she so thirsty
-                <br> I'm in that two seat Lambo"
-            </p>
-        </div>
-        <hr>
-        <div class="button-container">
-            <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                <i class="fab fa-facebook-f"></i>
-            </button>
-            <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                <i class="fab fa-twitter"></i>
-            </button>
-            <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                <i class="fab fa-google-plus-g"></i>
-            </button>
-        </div>
-    </div>
-</div--!>
+<html>
+<head>
+    <script>
+
+        <!-- javascript init -->
+        chartColor = "#FFFFFF";
+
+        // General configuration for the charts with Line gradientStroke
+        gradientChartOptionsConfiguration = {
+            maintainAspectRatio: false,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                bodySpacing: 4,
+                mode:"nearest",
+                intersect: 0,
+                position:"nearest",
+                xPadding:10,
+                yPadding:10,
+                caretPadding:10
+            },
+            responsive: 1,
+            scales: {
+                yAxes: [{
+                    display:0,
+                    gridLines:0,
+                    ticks: {
+                        display: false
+                    },
+                    gridLines: {
+                        zeroLineColor: "transparent",
+                        drawTicks: false,
+                        display: false,
+                        drawBorder: false
+                    }
+                }],
+                xAxes: [{
+                    display:0,
+                    gridLines:0,
+                    ticks: {
+                        display: false
+                    },
+                    gridLines: {
+                        zeroLineColor: "transparent",
+                        drawTicks: false,
+                        display: false,
+                        drawBorder: false
+                    }
+                }]
+            },
+            layout:{
+                padding:{left:0,right:0,top:15,bottom:15}
+            }
+        };
+
+        ctx = document.getElementById('lineChartExample').getContext("2d");
+
+        gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+        gradientStroke.addColorStop(0, '#80b6f4');
+        gradientStroke.addColorStop(1, chartColor);
+
+        gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
+        gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
+        gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
+
+        myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "Active Users",
+                    borderColor: "#f96332",
+                    pointBorderColor: "#FFF",
+                    pointBackgroundColor: "#f96332",
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 4,
+                    pointHoverBorderWidth: 1,
+                    pointRadius: 4,
+                    fill: true,
+                    backgroundColor: gradientFill,
+                    borderWidth: 2,
+                    data: [<?php
+                        $data ="SELECT * FROM `get_ledger_book` LIMIT 0, 1000";
+                        $result = $conn->query($data);
+                        if ($result->num_rows > 0){
+                            while($row = $result->fetch_assoc()){
+                                echo $row['balance'].",";
+                            }
+                        }
+                        ?>]
+                }]
+            },
+            options: gradientChartOptionsConfiguration
+        });
+
+    </script>
+</head>
+<body>
+<canvas id="lineChartExample"></canvas>
+</body>
+</html>
+
+

@@ -8,8 +8,71 @@
 
 class profile{
 
-    public $username,$email,$name,$address,$city,$country,$postal,$about ='';
+    //public $username,$email,$name,$address,$city,$country,$postal,$about ='';
 
+    public function update_profile ($conn){
+        $id = $_SESSION['user-id'];
+        if(isset($_POST['username'])){
+            $username = $_POST['username'];
+        }else{
+            $username ="";
+        }
+        if (isset($_POST['email'])){
+            $email = $_POST['email'];
+        }else{
+            $email="";
+        }
+        if(isset($_POST['f-name'])){
+            $fname = $_POST['f-name'];
+        }else{
+            $fname="";
+        }
+        if(isset($_POST['address'])){
+            $address = $_POST['address'];
+        }else{
+            $address="";
+        }
+        if(isset($_POST['city'])){
+            $city = $_POST['city'];
+        }else{
+            $city="";
+        }
+        if(isset($_POST['country'])){
+            $country = $_POST['country'];
+        }else{
+            $country="";
+        }
+        if(isset($_POST['postal'])){
+            $postal  = $_POST['postal'];
+        }else{
+            $postal="";
+        }
+        if (isset($_POST['about'])){
+            $about = $_POST['about'];
+        }else{
+            $about="";
+        }
+        if(isset($_POST['mobile'])){
+            $mobile = $_POST['mobile'];
+        }else{
+            $mobile="";
+        }
+        if(isset($_POST['about-me'])){
+            $about =$_POST['about-me'];
+        }else{
+            $about ="";
+        }
 
+        $update ="UPDATE `user` SET `fname`='$fname', `address`='$address', `city`='$city', `country`='$country', `postal`='$postal', `email`='$email', `mobile`='$mobile', `about`='$about', `username`='$username' WHERE (`userID`='$id')";
+        $result = $conn->query($update);
+
+        If ($result == TRUE){
+            header("location: index.php?page=profile&lang=en&token=". $_SESSION['token']);
+        }else{
+            header("location: index.php?page=profile&lang=en&&error=1&token=". $_SESSION['token']);
+
+        }
+
+    }
 
 }

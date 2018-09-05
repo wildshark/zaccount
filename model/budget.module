@@ -36,9 +36,9 @@ VALUES ('$categoryID', '$now', '$month', '$year', '$ref', '$details', '$type', '
         $result = $conn->query($add);
 
         if ($result == TRUE){
-            header("location: index.php?page=budget&lang=".$lang);
+            header("location: index.php?page=budget&lang=".$lang."&token=".$_SESSION['token']);
         } else{
-            header("location: index.php?page=budget&lang=".$lang."&error=1");
+            header("location: index.php?page=budget&lang=".$lang."&error=1&token=".$_SESSION['token']);
         }
 
     }
@@ -62,9 +62,9 @@ VALUES ('$categoryID', '$now', '$month', '$year', '$ref', '$details', '$type', '
         $result = $conn->query($update);
 
         if ($result == TRUE){
-            header("location: index.php?page=budget&lang=".$lang);
+            header("location: index.php?page=budget&lang=".$lang."&token=".$_SESSION['token']);
         } else{
-            header("location: index.php?page=budget&lang=".$lang."&error=1");
+            header("location: index.php?page=budget&lang=".$lang."&error=1&token=".$_SESSION['token']);
         }
 
     }
