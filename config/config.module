@@ -15,7 +15,7 @@ define('VERSION',"");
 
 
 //database connection
-define('SERVER',"heliohost.org");
+define('SERVER',"iquipe.heliohost.org");
 define('USERNAME',"iquipe_zaccount4");
 define('PASSWORD',"@iQuipe4299#");
 define('DATABASE',"iquipe_zaccount");
