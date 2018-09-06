@@ -15,8 +15,8 @@ define('VERSION',"");
 
 
 //database connection
-define('SERVER',"localhost");
-define('USERNAME',"root");
-define('PASSWORD',"");
-define('DATABASE',"zaccount");
+define('SERVER',"heliohost.org");
+define('USERNAME',"iquipe_zaccount4");
+define('PASSWORD',"@iQuipe4299#");
+define('DATABASE',"iquipe_zaccount");
 define('PORT',"3306");
