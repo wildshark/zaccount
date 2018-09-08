@@ -2,11 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: Andrew Quaye
- * Date: 03/09/2018
- * Time: 9:35 PM
+ * Date: 08/09/2018
+ * Time: 8:37 AM
  */
 ?>
+<?php
 
+?>
 <!DOCTYPE html>
 <html>
 
@@ -184,61 +186,29 @@
                                 <small>Or sign in with credentials</small>
                             </div>
                             <form role="form" method="post" action="login.php" enctype="multipart/form-data">
-                                <div class="form-group">
-                                    <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
-                                        </div>
-                                        <input name="full-name" required class="form-control" placeholder="First name Surname" type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
-                                        </div>
-                                        <input  name="mobile" required class="form-control" placeholder="233540000001" type="text">
-                                    </div>
-                                </div>
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                         </div>
-                                        <input name="email" required class="form-control" placeholder="Email" type="email">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-                                        </div>
                                         <input name="username" required class="form-control" placeholder="Username" type="text">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-                                        </div>
-                                        <input name="password" required class="form-control" placeholder="Password" type="password">
-                                    </div>
-                                </div>
                                 <div class="text-center">
-                                    <button type="submit" name="submit" value="sign-up" class="btn btn-primary my-4"><?php echo $button->register;?></button>
+                                    <button type="submit" name="submit" value="sign-in" class="btn btn-primary my-4"><?php echo $button->SignIn;?></button>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-6">
-                            <a href="#" class="text-light">
-                                <small>Forgot password?</small>
+                            <a href="<?php echo $url->recovery;?>" class="text-light">
+                                <small></small><?php echo $button->recovery;?></small>
                             </a>
                         </div>
                         <div class="col-6 text-right">
-                            <a href="#" class="text-light">
-                                <small>Create new account</small>
+                            <a href="<?php echo $url->register;?>" class="text-light">
+                                <small><?php echo $button->create;?></small>
                             </a>
                         </div>
                     </div>
