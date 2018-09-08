@@ -11,7 +11,9 @@ class profile{
     //public $username,$email,$name,$address,$city,$country,$postal,$about ='';
 
     public function update_profile ($conn){
-        $id = $_SESSION['user-id'];
+
+
+        $userID = $_SESSION["user-id"];
         if(isset($_POST['username'])){
             $username = $_POST['username'];
         }else{
@@ -63,7 +65,7 @@ class profile{
             $about ="";
         }
 
-        $update ="UPDATE `user` SET `fname`='$fname', `address`='$address', `city`='$city', `country`='$country', `postal`='$postal', `email`='$email', `mobile`='$mobile', `about`='$about', `username`='$username' WHERE (`userID`='$id')";
+        $update ="UPDATE `user` SET `fname`='$fname', `address`='$address', `city`='$city', `country`='$country', `postal`='$postal', `email`='$email', `mobile`='$mobile', `about`='$about', `username`='$username' WHERE (`userID`='$userID')";
         $result = $conn->query($update);
 
         If ($result == TRUE){

@@ -20,6 +20,7 @@ class budget{
 
     public static function add_budget($conn){
 
+        $userID = $_SESSION["user-id"];
         $month = $_POST['month'];
         $year = $_POST['year'];
         $categoryID = $_POST['category'];
@@ -31,8 +32,8 @@ class budget{
         $lang = self::Language();
         $now = date("Y/m/d");
 
-         $add ="INSERT INTO `budget` (`cataID`, `b_date`, `b_month`, `b_year`, `ref`, `details`, `payID`, `amount`) 
-VALUES ('$categoryID', '$now', '$month', '$year', '$ref', '$details', '$type', '$amount')";
+         $add ="INSERT INTO `budget` (`userID`,`cataID`, `b_date`, `b_month`, `b_year`, `ref`, `details`, `payID`, `amount`) 
+VALUES ('$userID','$categoryID', '$now', '$month', '$year', '$ref', '$details', '$type', '$amount')";
         $result = $conn->query($add);
 
         if ($result == TRUE){
@@ -45,6 +46,7 @@ VALUES ('$categoryID', '$now', '$month', '$year', '$ref', '$details', '$type', '
 
     public static  function edit_budget($conn){
 
+        $userID = $_SESSION["user-id"];
         $budgetID = $_SESSION['budgetID'];
         $userID = $_SESSION['userID'];
         $month = $_POST['month'];
@@ -58,7 +60,7 @@ VALUES ('$categoryID', '$now', '$month', '$year', '$ref', '$details', '$type', '
         $lang = self::Language();
         //$now = date("Y/m/d");
 
-        $update = "UPDATE `budget` SET `cataID`='$categoryID',`b_month`='$month', `b_year`='$year', `details`='$details', `payID`='$type', `amount`='$amount' WHERE (`budgetID`='$budgetID')";
+        $update = "UPDATE `budget` SET `userID` = '$userID',`cataID`='$categoryID',`b_month`='$month', `b_year`='$year', `details`='$details', `payID`='$type', `amount`='$amount' WHERE (`budgetID`='$budgetID')";
         $result = $conn->query($update);
 
         if ($result == TRUE){

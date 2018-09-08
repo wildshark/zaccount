@@ -75,7 +75,6 @@ if (isset($_GET['token'])){
                 $template->content ="view/profile.phtml";
                 require "template/form.php";
                 break;
-
         }
     }else{
         require "template/login.phtml";

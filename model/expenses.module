@@ -20,6 +20,7 @@ class expenses{
 
     public static function add_data($conn){
 
+        $userID = $_SESSION["user-id"];
         $categoryID = $_POST['category'];
         $details = $_POST['detail'];
         $type = $_POST['type'];
@@ -32,7 +33,7 @@ class expenses{
         $date = date_format($date,"Y/m/d");
 
         $add ="INSERT INTO `ledge` (`userID`, `bookID`, `cataID`, `tan_date`, `sdate`, `detail`,`payID`, `ref`, `debt`, `credit`) 
-VALUES ('1', '1', '$categoryID', '$now', '$date', '$details','$type' ,'$ref', '0', '$amount')";
+VALUES ('$userID', '1', '$categoryID', '$now', '$date', '$details','$type' ,'$ref', '0', '$amount')";
         $result = $conn->query($add);
 
         if ($result == TRUE){
@@ -47,7 +48,7 @@ VALUES ('1', '1', '$categoryID', '$now', '$date', '$details','$type' ,'$ref', '0
 
         $now = date("Y-m-d H:i:s");
         $date = $_POST['date'];
-        $userID=$_SESSION['userID'];
+        $userID = $_SESSION["user-id"];
         $categoryID = $_POST['category'];
         $details = $_POST['details'];
         $type = $_POST['payment'];
@@ -63,7 +64,7 @@ VALUES ('1', '1', '$categoryID', '$now', '$date', '$details','$type' ,'$ref', '0
     public static function delete($conn){
 
         $legID = "";
-        $userID ="";
+        $userID = $_SESSION["user-id"];
 
         $sql ="DELETE FROM `ledge` WHERE (`legID`='$legID')";
         $result = $conn->query($sql);

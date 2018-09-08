@@ -29,6 +29,7 @@ class LogIn_Details{
         if ($result->num_rows > 0){
             $row = $result->fetch_assoc();
             if ($row['username'] === $user && $row['password'] === $pwd){
+                $_SESSION["user-id"] = $row['userID'];
                 $_SESSION['token'] = $user_token;
                 $_SESSION['language'] = $language;
                 header("location: index.php?page=dashboard&lang={$language}&token={$user_token}");
@@ -56,8 +57,9 @@ class LogIn_Details{
          $sql ="INSERT INTO `user` (`fname`,`username`,`email`,`mobile`, `password`, `token`,`language`) 
 VALUES ('$f_name','$user','$email','$mob','$pwd','$user_token','$language')";
          $result = $conn->query($sql);
-
+         $user_id = $conn->insert_id;
          if ($result == TRUE){
+             $_SESSION["user-id"] = $user_id;
              $_SESSION['token'] = $user_token;
              header("location: index.php?page=dashboard&lang=en&token={$user_token}");
          } else{
