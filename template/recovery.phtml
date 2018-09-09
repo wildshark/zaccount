@@ -98,13 +98,12 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
                             <i class="ni ni-collection d-lg-none"></i>
-                            <span class="nav-link-inner--text">Examples</span>
+                            <span class="nav-link-inner--text"><?php echo $button->start;?></span>
                         </a>
                         <div class="dropdown-menu">
-                            <a href="../examples/landing.html" class="dropdown-item">Landing</a>
-                            <a href="../examples/profile.html" class="dropdown-item">Profile</a>
-                            <a href="../examples/login.html" class="dropdown-item">Login</a>
-                            <a href="../examples/register.html" class="dropdown-item">Register</a>
+                            <a href="<?php echo $url->logout;?>" class="dropdown-item"><?php echo $button->login;?></a>
+                            <a href="<?php echo $url->register;?>" class="dropdown-item"><?php echo $button->register2;?></a>
+                            <a href="<?php echo $url->recovery;?>" class="dropdown-item"><?php echo $button->recovery;?></a>
                         </div>
                     </li>
                 </ul>
@@ -191,7 +190,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                         </div>
-                                        <input name="username" required class="form-control" placeholder="Username" type="text">
+                                        <input name="email" required class="form-control" placeholder="Email" type="email">
                                     </div>
                                 </div>
                                 <div class="text-center">

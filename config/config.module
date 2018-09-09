@@ -20,3 +20,8 @@ define('USERNAME',"iquipe_zaccount4");
 define('PASSWORD',"@iQuipe4299#");
 define('DATABASE',"iquipe_zaccount");
 define('PORT',"3306");
+
+//social media
+define('FACEBOOK',"");
+define('TWITTER',"");
+define('IMG',"");

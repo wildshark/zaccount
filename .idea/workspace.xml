@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88f4eb4e-ea34-4a24-9cb1-17c58507c46c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/global/ip.info.io.module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ip.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/recovery.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/dashboard.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/template/dashboard.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.module" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/language/en_us.php" beforeDir="false" afterPath="$PROJECT_DIR$/language/en_us.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/login.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/template/login.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/recovery.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/template/recovery.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/register.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/template/register.phtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,13 +29,41 @@
     <expand />
     <select />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="register.phtml" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/template/register.phtml">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="254">
+                    <caret line="208" column="38" lean-forward="true" selection-start-line="201" selection-start-column="32" selection-end-line="208" selection-end-column="38" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard.phtml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/template/dashboard.phtml">
+      <file leaf-file-name="login.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/login.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4647">
-              <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+            <state relative-caret-position="280">
+              <caret line="99" column="25" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recovery.phtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/template/recovery.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="194" column="38" selection-start-line="194" selection-start-column="38" selection-end-line="194" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -95,7 +119,6 @@
         <option value="$PROJECT_DIR$/model/data.module" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/index.php" />
         <option value="$PROJECT_DIR$/template/table.php" />
-        <option value="$PROJECT_DIR$/language/url.module" />
         <option value="$PROJECT_DIR$/model/model.module" />
         <option value="$PROJECT_DIR$/view/profile.phtml" />
         <option value="$PROJECT_DIR$/global/session.module" />
@@ -107,7 +130,6 @@
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/plugin/assets2/css/now-ui-dashboard.css" />
         <option value="$PROJECT_DIR$/plugin/assets2/demo/demo.js" />
-        <option value="$PROJECT_DIR$/config/config.module" />
         <option value="$PROJECT_DIR$/page.module" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/model/budget.module" />
@@ -115,15 +137,17 @@
         <option value="$PROJECT_DIR$/model/profile.module" />
         <option value="$PROJECT_DIR$/model/expenses.module" />
         <option value="$PROJECT_DIR$/model/setting.module" />
-        <option value="$PROJECT_DIR$/language/en_us.php" />
         <option value="$PROJECT_DIR$/global/ip.info.io.module" />
         <option value="$PROJECT_DIR$/ip.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/template/register.phtml" />
-        <option value="$PROJECT_DIR$/template/recovery.phtml" />
-        <option value="$PROJECT_DIR$/template/login.phtml" />
         <option value="$PROJECT_DIR$/template/form.php" />
         <option value="$PROJECT_DIR$/template/dashboard.phtml" />
+        <option value="$PROJECT_DIR$/config/config.module" />
+        <option value="$PROJECT_DIR$/language/url.module" />
+        <option value="$PROJECT_DIR$/language/en_us.php" />
+        <option value="$PROJECT_DIR$/template/register.phtml" />
+        <option value="$PROJECT_DIR$/template/login.phtml" />
+        <option value="$PROJECT_DIR$/template/recovery.phtml" />
       </list>
     </option>
   </component>
@@ -161,17 +185,17 @@
             <path>
               <item name="zaccount" type="b2602c69:ProjectViewProjectNode" />
               <item name="zaccount" type="462c0819:PsiDirectoryNode" />
-              <item name="global" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zaccount" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zaccount" type="462c0819:PsiDirectoryNode" />
-              <item name="language" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zaccount" type="b2602c69:ProjectViewProjectNode" />
               <item name="zaccount" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zaccount" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zaccount" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -224,12 +248,12 @@
       <workItem from="1536037321486" duration="49500000" />
       <workItem from="1536223074807" duration="2112000" />
       <workItem from="1536258591346" duration="7612000" />
-      <workItem from="1536420725348" duration="5376000" />
+      <workItem from="1536420725348" duration="8029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151293000" />
+    <option name="totallyTimeSpent" value="153946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -329,13 +353,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/cashbook.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -471,13 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/user.ip.info.module">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2227">
@@ -492,23 +502,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugin/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-306" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/expenses.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/data.module">
@@ -553,34 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/recovery.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/login.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/language/url.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/register.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/language/language.module">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -609,10 +577,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/expenses.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="74" column="1" lean-forward="true" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/cashbook.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/language/en_us.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="456">
+          <caret line="34" column="6" selection-start-line="34" selection-end-line="34" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/dashboard.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="124" column="35" lean-forward="true" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/url.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -623,10 +633,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/dashboard.phtml">
+    <entry file="file://$PROJECT_DIR$/template/login.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4647">
-          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        <state relative-caret-position="280">
+          <caret line="99" column="25" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/register.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="208" column="38" lean-forward="true" selection-start-line="201" selection-start-column="32" selection-end-line="208" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/recovery.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="194" column="38" selection-start-line="194" selection-start-column="38" selection-end-line="194" selection-end-column="38" />
         </state>
       </provider>
     </entry>
