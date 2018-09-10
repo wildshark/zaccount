@@ -7,28 +7,60 @@
  */
 
 include_once "profile.module";
+include_once "setting.module";
 include_once "income.module";
 include_once "expenses.module";
 include_once "budget.module";
 include_once "user.ip.info.module";
 
-if ($_POST['submit'] === 'add income'){
-    income::add_data($conn);
-}elseif ($_POST['submit'] ==='edit income'){
-    income::edit_data($conn);
-}elseif ($_POST['submit'] ==="delete-income"){
-    income::delete($conn);
-}elseif ($_POST['submit']==="add expenses"){
-    expenses::add_data($conn);
-}elseif ($_POST['submit']==="edit expenses"){
-    expenses::edit_data($conn);
-}elseif ($_POST['submit']==="delete"){
-    expenses::delete($conn);
-}elseif ($_POST['submit']==="add category income"){
-    setting::add_data($conn);
-}elseif($_POST['submit'] === "add budget"){
-    budget::add_budget($conn);
-}elseif ($_POST['submit'] === "profile-update"){
-    profile::update_profile ($conn);
+if (isset($_POST['submit'])){
+    $submit = $_POST['submit'];
+}else{
+    $submit = $_GET['submit'];
 }
 
+if ($submit === 'add income'){
+    income::add_data($conn);
+}elseif ($submit ==='edit income'){
+    income::edit_data($conn);
+}elseif ($submit ==="delete-income"){
+    income::delete($conn);
+}elseif ($submit==="add expenses"){
+    expenses::add_data($conn);
+}elseif ($submit==="edit expenses"){
+    expenses::edit_data($conn);
+}elseif ($submit==="add category"){
+    setting::add_data($conn);
+}elseif($submit === "add budget"){
+    budget::add_budget($conn);
+}elseif ($submit === "profile-update"){
+    profile::update_profile ($conn);
+}elseif ($submit === 'del-exp'){
+    $legID = $_GET['code'];
+    //$userID = $_SESSION["user-id"];
+
+    $sql ="DELETE FROM `ledge` WHERE (`legID`='$legID')";
+    $result = $conn->query($sql);
+
+    $lang = "en";
+
+    if ($result == TRUE){
+        header("location:". $_SERVER['HTTP_REFERER']);
+    } else{
+        header("location:". $_SERVER['HTTP_REFERER'] );
+    }
+}elseif ($submit === 'del-setting'){
+    $id = $_GET['code'];
+    //$userID = $_SESSION["user-id"];
+
+    $sql ="DELETE FROM `category` WHERE (`cataID`='$id')";
+    $result = $conn->query($sql);
+
+    $lang = "en";
+
+    if ($result == TRUE){
+        header("location:". $_SERVER['HTTP_REFERER']);
+    } else{
+        header("location:". $_SERVER['HTTP_REFERER'] );
+    }
+}

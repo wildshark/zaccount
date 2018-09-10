@@ -30,6 +30,7 @@ $button->register="Sign Up";
 
 $button->recovery ="Forgot password?";
 $button->create="Create new account";
+$button->setting = "Setting";
 
 //home
 $button->start ="Start";

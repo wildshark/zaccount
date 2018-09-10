@@ -6,76 +6,129 @@
  * Time: 4:12 AM
  */
 ?>
-<div class="col-md-12">
+
+<div class="col-md-6">
     <div class="card">
         <div class="card-body">
-            <div class="card text-center">
-                <div class="card-header card-header-rose">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="income-tab" data-toggle="tab" href="#income" role="tab" aria-controls="income" aria-selected="false">Income</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="expenses-tab" data-toggle="tab" href="#expenses" role="tab" aria-controls="expenses" aria-selected="false">Expense</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#">Expense</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="card-body tab-pane fade show active" id="profile" role="tabpanel" >
-                        <form>
-                            <div class="col-xl-6">
-                                <div class="form-group">
-                                    <label for="inputAddress">Address</label>
-                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <button type="submit" class="btn btn-primary pull-left">Sign in</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="card-body tab-pane fade" id="income" role="tabpanel">
-                        <div class="col-md-12">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th class="text-center">#</th>
-                                    <th>Category</th>
-                                    <th>Description</th>
-                                    <th class="text-right">Actions</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    <?php income_category_sheet($conn);?>
-                                </tbody>
-                            </table>
+            <div class="card card-nav-tabs card-plain">
+                <div class="card-header card-header-danger">
+                    <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                    <div class="nav-tabs-navigation">
+                        <div class="nav-tabs-wrapper">
+                            <ul class="nav nav-tabs" data-tabs="tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#income-entry" data-toggle="tab">Income</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#expenses-entry" data-toggle="tab">Expenses</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#history" data-toggle="tab">Payment Type</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="card-body tab-pane fade" id="expenses" role="tabpanel">
-                        <div class="col-md-12">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th class="text-center">#</th>
-                                    <th>Category</th>
-                                    <th>Description</th>
-                                    <th class="text-right">Actions</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    <?php expenses_category_sheet($conn);?>
-                                </tbody>
-                            </table>
+                </div><div class="card-body ">
+                    <div class="tab-content text-center">
+                        <div class="tab-pane active" id="income-entry">
+                            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
+                                <input type="hidden" name="type" value="1">
+                                <div class="row">
+                                    <div class="col-md-8 pr-1">
+                                        <div class="form-group">
+                                            <label>Income Type</label>
+                                            <input type="text" name="category" class="form-control" placeholder="Income Type" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 pr-1">
+                                        <div class="form-group">
+                                            <label>status</label>
+                                            <select name="status" id="inputState" class="form-control">
+                                                <option value="1">Enable</option>
+                                                <option VALUE="2">Disable</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Details</label>
+                                            <textarea rows="4" name="description" cols="80" class="form-control" placeholder="Here can be your description"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 pr-1">
+                                        <button type="submit" name="submit" value="add category" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="expenses-entry">
+                            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
+                                <input type="hidden" name="type" value="2">
+                                <div class="row">
+                                    <div class="col-md-8 pr-1">
+                                        <div class="form-group">
+                                            <label>Expenses Type</label>
+                                            <input type="text" name="category" class="form-control" placeholder="Expenses Type" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 pr-1">
+                                        <div class="form-group">
+                                            <label>Status</label>
+                                            <select name="status" id="inputState" class="form-control">
+                                                <option value="1">Enable</option>
+                                                <option VALUE="2">Disable</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Details</label>
+                                            <textarea rows="4" name="description" cols="80" class="form-control" placeholder="Here can be your description"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 pr-1">
+                                        <button type="submit" name="submit" value="add category" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="history">
+                            <p> I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-body">
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
+                <div class="table-responsive">
+                    <table class="table table-shopping">
+                        <thead>
+                        <tr>
+                            <th>Transaction</th>
+                            <th>Book</th>
+                            <th class="th-description">Status</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php category_sheet($conn);?>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
         </div>
     </div>
 </div>

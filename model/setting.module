@@ -8,50 +8,23 @@
 
 class Setting{
 
-    private function IncomeCounter($conn){
-
-        $userID = $_SESSION["user-id"];
-        $data ="SELECT Count(get_income_category.cataID) AS total, userID='$userID'  FROM get_income_category";
-        $result = $conn->query($data);
-        $counter = $result->fetch_assoc();
-
-        if (!is_null($counter['total'])){
-            $total = $counter + 1;
-        }else{
-            $total = 101;
-        }
-        return $total;
-    }
-    private function ExpensesCounter($conn){
-
-        $userID = $_SESSION["user-id"];
-        $data ="SELECT Count(get_expenses_category.cataID) AS total, userID='$userID' FROM get_expenses_category";
-        $result = $conn->query($data);
-        $counter = $result->fetch_assoc();
-
-        if (!is_null($counter['total'])){
-            $total = $counter + 1;
-        }else{
-            $total = 101;
-        }
-        return $total;
-    }
-
     public static function add_data($conn){
 
-
+        $lang = $_SESSION['lang'];
         $userID = $_SESSION["user-id"];
+
         $type = $_POST['type'];
         $category = $_POST['category'];
         $description =$_POST['description'];
 
-        if ($type == 1){
-            $cat_code  = self::IncomeCounter();
-        }else{
-            $cat_code = self::ExpensesCounter();
-        }
-
-        $add="INSERT INTO `category` (`userID`,`cata_code`, `category`,`description`, `bookID`) VALUES ('$userID','$cat_code', '$category', '$description')";
+        $add="INSERT INTO `category` (`userID`, `category`,`description`, `bookID`) VALUES ('$userID','$category', '$description','$type')";
         $result = $conn->query($add);
+
+        if ($result == TRUE){
+            header("location: index.php?page=setting&lang=".$lang."&token=".$_SESSION['token']);
+        } else{
+            header("location: index.php?page=setting&lang=".$lang."&error=1&token=".$_SESSION['token']);
+        }
     }
+
 }

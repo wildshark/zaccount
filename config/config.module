@@ -13,14 +13,20 @@ date_default_timezone_set('UTC');
 define('APPLICATION', "zACCOUNT");
 define('VERSION',"");
 
-
+//database connection
+define('SERVER',"localhost");
+define('USERNAME',"root");
+define('PASSWORD',"");
+define('DATABASE',"zaccount");
+define('PORT',"3306");
+/**
 //database connection
 define('SERVER',"iquipe.heliohost.org");
 define('USERNAME',"iquipe_zaccount4");
 define('PASSWORD',"@iQuipe4299#");
 define('DATABASE',"iquipe_zaccount");
 define('PORT',"3306");
-
+***/
 //social media
 define('FACEBOOK',"");
 define('TWITTER',"");

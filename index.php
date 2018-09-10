@@ -13,7 +13,8 @@ include_once "language/url.module";
 
 if (isset($_REQUEST['page'])){
     //echo"display page";
-      require "page.module";
+    $page = $_REQUEST['page'];
+    require "page.module";
 }elseif (isset($_REQUEST['submit'])) {
     require "model/model.module";
 }elseif (isset($_GET['login'])){

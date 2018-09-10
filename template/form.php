@@ -94,7 +94,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="<?php echo $url->profile;?>"><?php echo $button->profile;?></a>
-                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="<?php echo $url->setting;?>"><?php echo $button->setting?></a>
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </li>
