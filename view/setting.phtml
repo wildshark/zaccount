@@ -23,7 +23,7 @@
                                     <a class="nav-link" href="#expenses-entry" data-toggle="tab">Expenses</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#history" data-toggle="tab">Payment Type</a>
+                                    <a class="nav-link" href="#bank-entry" data-toggle="tab">Bank</a>
                                 </li>
                             </ul>
                         </div>
@@ -100,8 +100,64 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="tab-pane" id="history">
-                            <p> I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
+                        <div class="tab-pane" id="bank-entry">
+                            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-md-6 pr-1">
+                                        <div class="form-group">
+                                            <label>Bank Name</label>
+                                            <input type="text" name="bank" class="form-control" placeholder="Expenses Type" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 pr-1">
+                                        <div class="form-group">
+                                            <label>Account Number</label>
+                                            <input type="text" name="bank" class="form-control" placeholder="Expenses Type" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 pr-1">
+                                        <div class="form-group">
+                                            <label>ATM Card</label>
+                                            <input type="text" name="atm" class="form-control" placeholder="Expenses Type" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 pr-1">
+                                        <div class="form-group">
+                                            <label>ATM Type</label>
+                                            <select name="status" id="inputState" class="form-control">
+                                                <option value="1">Enable</option>
+                                                <option VALUE="2">Disable</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Bank Address</label>
+                                            <textarea rows="4" name="description" cols="80" class="form-control" placeholder="Here can be your description"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 pr-1">
+                                        <div class="form-group">
+                                            <label>Status</label>
+                                            <select name="status" id="inputState" class="form-control">
+                                                <option value="1">Enable</option>
+                                                <option VALUE="2">Disable</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 pr-1">
+                                        <button type="submit" name="submit" value="add category" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -230,8 +230,7 @@ function bank_book_sheet($conn){
         echo"
             <tr>
                 <td class='text-center'>{$row['sdate']}</td>
-                <td>{$row['category']}</td>
-                <td>{$row['detail']}</td>
+                <td>{$row['detail']} #<b>{$row['category']}</b></td>
                 <td>{$row['ref']}</td>
                 <td class='text-right'>{$row['b_debt']}</td>
                 <td class='text-right'>{$row['b_credit']}</td>

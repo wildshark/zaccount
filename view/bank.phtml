@@ -5,13 +5,24 @@
  * Date: 02/09/2018
  * Time: 9:32 PM
  */
+
+include_once "model/bank.module";
+
+
+
 ?>
 <div class="content">
     <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title"> Simple Table</h4>
+                    <h4 class="card-title">
+                        Bank
+                        <a href="" class="btn btn-primary btn-sm">Deposit </a>
+                        <a href="" class="btn btn-primary btn-sm">Withdrawal</a>
+                        <a href="" class="btn btn-primary btn-sm">Bank Charges</a>
+                        <button class="btn btn-primary btn-sm">Available Cash: <?php echo $u = bank::balance($conn);?>  </button>
+                    </h4>
                 </div>
                 <div class="card-body">
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
@@ -20,7 +31,6 @@
                             <table class="table">
                                 <thead class=" text-primary">
                                 <th class="text-center">Date</th>
-                                <th>Category</th>
                                 <th>Desperation</th>
                                 <th>Ref. No#</th>
                                 <th class="text-right">Debit</th>

@@ -11,7 +11,10 @@ include_once "setting.module";
 include_once "income.module";
 include_once "expenses.module";
 include_once "budget.module";
+include_once "bank.module";
 include_once "user.ip.info.module";
+
+
 
 if (isset($_POST['submit'])){
     $submit = $_POST['submit'];
@@ -23,14 +26,14 @@ if ($submit === 'add income'){
     income::add_data($conn);
 }elseif ($submit ==='edit income'){
     income::edit_data($conn);
-}elseif ($submit ==="delete-income"){
-    income::delete($conn);
 }elseif ($submit==="add expenses"){
     expenses::add_data($conn);
 }elseif ($submit==="edit expenses"){
     expenses::edit_data($conn);
 }elseif ($submit==="add category"){
     setting::add_data($conn);
+}elseif ($submit ==="add bank"){
+    bank::add_new_bank($conn);
 }elseif($submit === "add budget"){
     budget::add_budget($conn);
 }elseif ($submit === "profile-update"){

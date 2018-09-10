@@ -1,0 +1,49 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Andrew Quaye
+ * Date: 10/09/2018
+ * Time: 4:30 PM
+ */
+
+class bank{
+
+    function add_new_bank($conn){
+
+        $id = $_SESSION['user-id'];
+        $bank = $_POST['bank'];
+        $account = $_POST['account'];
+        $atm = $_POST['atm'];
+        $atm_type = $_POST['atm-type'];
+        $address = $_POST['address'];
+
+        $sql ="INSERT INTO `bank` (`userID`,`bank_name`, `accountNo`, `atm`, `atm_type`, `address`) VALUES ('$id', '$bank', '$account', '$atm', '$atm_type','$address')";
+        $result = $conn->query($sql);
+    }
+
+    function deposit($conn){
+
+    }
+
+    function withdrawal($conn){
+
+    }
+
+    function balance($conn){
+        $id = $_SESSION['user-id'];
+        $sql = "SELECT * FROM `get_bank_summary` where userID='$id'";
+        $result = $conn->query($sql);
+        $bal = $result->fetch_assoc();
+
+
+        if (isset($bal['balance']) || !is_null($bal['balance'])){
+            $balance = $bal['balance'];
+        }else{
+            $balance = "0.00";
+        }
+        return $balance;
+    }
+
+}
+
+
