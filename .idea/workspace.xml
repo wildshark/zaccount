@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88f4eb4e-ea34-4a24-9cb1-17c58507c46c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/view/utilities.bill.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.module" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global/function.module" beforeDir="false" afterPath="$PROJECT_DIR$/global/function.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/language/en_us.php" beforeDir="false" afterPath="$PROJECT_DIR$/language/en_us.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/language/url.module" beforeDir="false" afterPath="$PROJECT_DIR$/language/url.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/data.module" beforeDir="false" afterPath="$PROJECT_DIR$/model/data.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/expenses.module" beforeDir="false" afterPath="$PROJECT_DIR$/model/expenses.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model.module" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page.module" beforeDir="false" afterPath="$PROJECT_DIR$/page.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/side.menu.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/template/side.menu.phtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,11 +65,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.module" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page.module" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page.module">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="388">
               <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.module" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/config.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -175,7 +174,6 @@
         <option value="$PROJECT_DIR$/view/expenses.phtml" />
         <option value="$PROJECT_DIR$/model/setting.module" />
         <option value="$PROJECT_DIR$/view/income.phtml" />
-        <option value="$PROJECT_DIR$/config/config.module" />
         <option value="$PROJECT_DIR$/language/en_us.php" />
         <option value="$PROJECT_DIR$/language/url.module" />
         <option value="$PROJECT_DIR$/global/function.module" />
@@ -185,6 +183,7 @@
         <option value="$PROJECT_DIR$/model/expenses.module" />
         <option value="$PROJECT_DIR$/model/data.module" />
         <option value="$PROJECT_DIR$/page.module" />
+        <option value="$PROJECT_DIR$/config/config.module" />
       </list>
     </option>
   </component>
@@ -221,6 +220,11 @@
             <path>
               <item name="zaccount" type="b2602c69:ProjectViewProjectNode" />
               <item name="zaccount" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zaccount" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zaccount" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zaccount" type="b2602c69:ProjectViewProjectNode" />
@@ -284,15 +288,15 @@
       <workItem from="1536223074807" duration="2112000" />
       <workItem from="1536258591346" duration="7612000" />
       <workItem from="1536420725348" duration="12376000" />
-      <workItem from="1536509454227" duration="38376000" />
+      <workItem from="1536509454227" duration="38408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196669000" />
+    <option name="totallyTimeSpent" value="196701000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20499243" />
@@ -602,13 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/income.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
@@ -701,6 +698,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
           <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
