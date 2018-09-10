@@ -7,6 +7,7 @@
  */
 
 function calender_year($conn){
+
     $sql="SELECT * FROM get_calender_yr";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()){
@@ -26,7 +27,9 @@ function calender_month($conn){
 
 function income_categories($conn){
 
-    $sql="SELECT * FROM get_income_category";
+    $id = $_SESSION['user-id'];
+
+    $sql="SELECT * FROM get_income_category where userID='$id'";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()){
         echo "<option value='".$row['cataID']."'>".$row['category']."</option>";
@@ -35,7 +38,9 @@ function income_categories($conn){
 
 function expenses_categories($conn){
 
-    $sql="SELECT * FROM get_expenses_category";
+    $id = $_SESSION['user-id'];
+
+    $sql="SELECT * FROM get_expenses_category where userID='$id'";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()){
         echo "<option value='".$row['cataID']."'>".$row['category']."</option>";
@@ -44,7 +49,7 @@ function expenses_categories($conn){
 
 function payment_type($conn){
 
-    $sql="SELECT * FROM `get_payment_type` ";
+    $sql="SELECT * FROM `get_payment_type` where payID= 1 or payID=2 ";
     $result = $conn->query($sql);
     while($list = $result->fetch_assoc()){
         echo"<option value='".$list['payID']."'>".$list['payment_type']."</option>";

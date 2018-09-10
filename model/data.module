@@ -114,7 +114,6 @@ function transaction_display_utilities_bill($conn){
     }
 }
 
-
 function income_category_sheet($conn){
 
     $id = $_SESSION['user-id'];
@@ -225,7 +224,7 @@ function bank_book_sheet($conn){
 
     $id = $_SESSION['user-id'];
 
-    $data ="SELECT * FROM `get_bank` where payID=1";
+    $data ="SELECT * FROM `get_bank` where payID=1 and userID='$id'";
     $result = $conn->query($data);
     while($row = $result->fetch_assoc()){
         echo"
@@ -250,7 +249,7 @@ function cash_book_sheet($conn){
 
     $id = $_SESSION['user-id'];
 
-    $data ="SELECT * FROM `get_cashbook` ";
+    $data ="SELECT * FROM `get_cashbook` where userID='$id' ";
     $result = $conn->query($data);
     if ($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
@@ -277,7 +276,9 @@ function cash_book_sheet($conn){
 
 function budget_book_sheet($conn){
 
-    $data ="SELECT * FROM `get_budget` ORDER BY budgetID DESC";
+    $id = $_SESSION['user-id'];
+
+    $data ="SELECT * FROM `get_budget` where userID='$id' ORDER BY budgetID DESC";
     $result = $conn->query($data);
     if ($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
