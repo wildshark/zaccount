@@ -35,6 +35,10 @@ if ($submit === 'add income'){
     budget::add_budget($conn);
 }elseif ($submit === "profile-update"){
     profile::update_profile ($conn);
+}elseif($submit === "add bill"){
+    expenses::add_utilities_bill($conn);
+}elseif ($submit === "edit bill"){
+    expenses::edit_utilities_bill($conn);
 }elseif ($submit === 'del-exp'){
     $legID = $_GET['code'];
     //$userID = $_SESSION["user-id"];

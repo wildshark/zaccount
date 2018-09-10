@@ -27,6 +27,7 @@ $button->budget ="Budget";
 $button->profile ="Profile";
 $button->SignIn="Sign in";
 $button->register="Sign Up";
+$button->bill = "Utilities & Bills";
 
 $button->recovery ="Forgot password?";
 $button->create="Create new account";

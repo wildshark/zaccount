@@ -94,9 +94,61 @@ VALUES ('$userID', '2', '$categoryID', '$now', '$date', '$details','$type' ,'$re
 
     }
 
-    public static function delete($conn){
+    public static function add_utilities_bill($conn){
 
+        $userID = $_SESSION["user-id"];
+        $categoryID = $_POST['category'];
+        $details = $_POST['detail'];
+        $type = $_POST['type'];
+        $ref = $_POST['ref'];
+        $amount = $_POST['amount'];
 
+        $lang = self::Language();
+
+        $now = date("Y/m/d H:i:s");
+        $date = date_create( $_POST['date']);
+        $date = date_format($date,"Y/m/d");
+
+        if ($categoryID === "Choose..." || $type === "Choose..."){
+            header("location: index.php?page=expenses&lang=".$lang."&error=1&token=".$_SESSION['token']);
+        }else {
+
+       $add = "INSERT INTO `utilities_bills` (`tran_date`, `cdate`,`userID`,`cataID`, `detail`,`ref`, `typeID`, `bills`) VALUES ('$now', '$date', '$userID','$categoryID', '$details', '$ref', '$type','$amount')";
+       $result = $conn->query($add);
+
+            if ($result == TRUE) {
+                header("location: index.php?page=utilities-bill&lang=" . $lang . "&token=" . $_SESSION['token']);
+            } else {
+                header("location: index.php?page=utilities-bill&lang=" . $lang . "&error=1&token=" . $_SESSION['token']);
+            }
+        }
+    }
+
+    public static function edit_utilities_bill($conn){
+
+        $legID = $_SESSION['ledgerID'];
+        $userID = $_SESSION["user-id"];
+
+        $lang = self::Language();
+
+        $now = date("Y-m-d H:i:s");
+        $date = date_create( $_POST['date']);
+        $date = date_format($date,"Y/m/d");
+
+        $categoryID = $_POST['category'];
+        $details = $_POST['detail'];
+        $type = $_POST['type'];
+        $ref = $_POST['ref'];
+        $amount = $_POST['amount'];
+
+        $sql ="UPDATE `utilities_bills` SET `userID`='$userID', `tran_date`='$now', `cdate`='$date', `cataID`='$categoryID', `detail`='$details', `ref`='$ref', `typeID`='$type', `bills`='$amount' WHERE (`utilitiesID`='$legID')";
+        $result = $conn->query($sql);
+
+        if ($result == TRUE){
+            header("location: index.php?page=utilities-bill&lang=".$lang."&token=".$_SESSION['token']);
+        } else{
+            header("location: index.php?page=utilities-bill&lang=".$lang."&error=1&token=".$_SESSION['token']);
+        }
 
     }
 

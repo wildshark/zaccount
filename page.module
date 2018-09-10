@@ -46,6 +46,18 @@ if (isset($_GET['token'])){
                 require "template/form.php";
                 break;
 
+            case"utilities-bill";
+                $template->title ="Utilities & Bills";
+                $template->content ="view/utilities.bill.phtml";
+                require "template/form.php";
+            break;
+
+            case"pay-utilities-bill";
+                $template->title ="Payment Voucher";
+                $template->content ="view/utilities.bill.phtml";
+                require "template/form.php";
+            break;
+
             case"bank";
                 $template->title ="Bank Book";
                 $template->content ="view/bank.phtml";

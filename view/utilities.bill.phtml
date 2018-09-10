@@ -1,0 +1,136 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Andrew Quaye
+ * Date: 10/09/2018
+ * Time: 6:35 AM
+ */
+
+if(!isset($_GET['code'])){
+    $date ="";
+    $category ="Choose...";
+    $ref="TB".rand();
+    $detail = "";
+    $type ="Choose...";
+    $amount="";
+    $button->action = "add bill";
+}else{
+    $id = $_GET['code'];
+
+    $data ="SELECT * FROM `get_utilities_bill` where legID ='$id' ORDER BY legID DESC";
+    $result = $conn->query($data);
+    if ($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+
+            $_SESSION['ledgerID'] = $row['legID'];
+            $date = $row['date'];
+            $categoryID = $row['cataID'];
+            $category = $row['category'];
+            $ref= $row['ref'];
+            $detail = $row['detail'];
+            $type = $row['payment_type'];
+            $amount = $row['bills'];
+
+            $button->action = "edit bill";
+
+        }
+    }
+}
+
+?>
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="title">Bill Slip | <?php echo $ref;?></h5>
+        </div>
+        <div class="card-body">
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-5 pr-1">
+                        <div class="form-group">
+                            <label>Date</label>
+                            <input type="date" name="date" class="form-control" placeholder="" value="<?php echo $date;?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 pr-1">
+                        <div class="form-group">
+                            <label>Categories</label>
+                            <select name="category" id="inputState" class="form-control">
+                                <option value="<?php echo $categoryID;?>" selected><?php echo $category;?></option>
+                                <?php expenses_categories($conn);?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-5 pr-1">
+                        <div class="form-group">
+                            <label>Ref#</label>
+                            <input type="text" name="ref" class="form-control" placeholder="" value="<?php echo $ref;?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Details</label>
+                            <textarea rows="4" name="detail" cols="80" class="form-control" placeholder="Here can be your description"><?php echo $detail;?></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 pr-1">
+                        <div class="form-group">
+                            <label>Invoice Type</label>
+                            <select name="type" id="inputState" class="form-control">
+                                <option value="<?php echo $typeID;?>" selected><?php echo $type;?></option>
+                                    <?php utilities_bill_type($conn);?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pr-1">
+                        <div class="form-group">
+                            <label>Amount</label>
+                            <input type="text" name="amount" class="form-control" placeholder="0.00" value="<?php echo $amount;?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 pr-1">
+                        <button type="submit" name="submit" value="<?php echo $button->action;?>" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="card card-user">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Period</th>
+                <th>Ref#</th>
+                <th>Details</th>
+                <th class="text-right">Amount</th>
+                <th class="text-right">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                <?php transaction_display_utilities_bill($conn);?>
+            </tbody>
+        </table>
+        <hr>
+        <div class="button-container">
+            <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                <i class="fab fa-facebook-f"></i>
+            </button>
+            <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                <i class="fab fa-google-plus-g"></i>
+            </button>
+        </div>
+    </div>
+</div>

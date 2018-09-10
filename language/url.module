@@ -15,6 +15,7 @@ if (!isset($_SESSION['token'])){
     $url->logout ="index.php?page=login&lang=en";
 }else{
     $url->dashboard = "index.php?page=dashboard&lang=en&token={$_SESSION['token']}";
+    $url->bill ="index.php?page=utilities-bill&lang=en&token={$_SESSION['token']}";
     $url->income ="index.php?page=income&lang=en&token={$_SESSION['token']}";
     $url->expenses ="index.php?page=expenses&lang=en&token={$_SESSION['token']}";
     $url->salary = "index.php?page=salary&lang=en&token={$_SESSION['token']}";
