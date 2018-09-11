@@ -10,6 +10,7 @@ if (isset($_GET['token'])){
     $token = $_GET['token'];
 }else{
     header("location:". $url->logout);
+    exit();
 }
 
 $sql ="SELECT * FROM `get_user` where token ='$token'";
