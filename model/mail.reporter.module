@@ -1,0 +1,10 @@
+<?php
+
+$email;
+$subject;
+$header;
+
+mail($email,$subject,$header);
+
+
+?>

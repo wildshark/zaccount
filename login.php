@@ -29,9 +29,18 @@ class LogIn_Details{
         if ($result->num_rows > 0){
             $row = $result->fetch_assoc();
             if ($row['username'] === $user && $row['password'] === $pwd){
+
+
                 $_SESSION["user-id"] = $row['userID'];
                 $_SESSION['token'] = $user_token;
                 $_SESSION['language'] = $language;
+
+                $to = $row['email'];
+                $subject = "Login to zaccount ". date("dd-mm-YY");
+                $body = "User". $user ."just login at ". date("dd-mm-YYY");
+                $header = "From : zaccount@zaccount.com";
+                mail($to,$subject,$body,$header);
+
                 header("location: index.php?page=dashboard&lang={$language}&token={$user_token}");
             }else{
                 session_unset();
